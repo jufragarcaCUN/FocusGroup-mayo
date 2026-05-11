@@ -1,0 +1,313 @@
+!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Auditoría de Escucha Activa CUN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./estilos/estiloTablas.css">
+        <link rel="stylesheet" href="./estilos/style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="brand">CUN ANALYTICS</div>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li>
+                        <button class="nav-btn active" data-tab="inicio">Resumen Ejecutivo</button>
+                    </li>
+                    
+                    <div class="nav-label">DIMENSIONES CRÍTICAS</div>
+                    
+                    <li><a href="./HojasHtml/12-Febrerohtml" class="nav-btn">12 de Febrero</a></li>
+                    <li><a href="./HojasHtml/13-Marzo.html" class="nav-btn">13 de Marzo</a></li>
+                    <li><a href="./HojasHtml/Sincelejo.html" class="nav-btn">Sincelejo</a></li>
+                    <li><a href="./HojasHtml/Monteria.html" class="nav-btn">Montería</a></li>
+                    <li><a href="./HojasHtml/SantaMarta.html" class="nav-btn">Santa Marta</a></li>
+                    <li><a href="./HojasHtml/Neiva.html" class="nav-btn">Neiva</a></li>
+                     <li><a href="./HojasHtml/Ibague.html" class="nav-btn">Neiva</a></li>
+                    <li><button class="nav-btn" id="back-btn">Regresar</button></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <section id="inicio" class="tab-pane active">
+                <h1 class="main-title">Resumen Ejecutivo: Auditoría de Escucha Activa</h1>
+                
+                <div class="welcome-card">
+                    <h2 class="section-subtitle">Especificaciones del Estudio</h2>
+                    <p class="welcome-text">
+<p class="welcome-text">
+    Este informe es el resultado de la minería de datos cualitativos obtenida en los 
+    <strong>Grupos Focales de febrero (16 presenciales y 2 virtuales)</strong> y 
+    <strong>marzo (18 virtuales y 2 presenciales)</strong>. 
+    
+</p>
+                </div>
+
+                <div class="contenedor-insights-gigante">
+                    <div class="caja-superior">
+                        <h4 class="titulo-gigante">1. Métricas de Sentimiento</h4>
+                        <p class="texto-gigante">Análisis de <strong>Polaridad</strong> y <strong>Subjetividad</strong>.</p>
+                    </div>
+                    <div class="caja-superior">
+                        <h4 class="titulo-gigante">2. Métricas de Gestión</h4>
+                        <p class="texto-gigante">Evaluación técnica del servicio mediante <strong>Score, Intensidad e Impacto</strong>.</p>
+                    </div>
+                    <div class="caja-superior">
+                        <h4 class="titulo-gigante">3. Intensidad y Esfuerzo</h4>
+                        <p class="texto-gigante">Evaluación del <strong>"Customer Effort Score"</strong>.</p>
+                    </div>
+                    <div class="caja-superior">
+                        <h4 class="titulo-gigante">4. Análisis e Insights</h4>
+                        <p class="texto-gigante">Interpretación estratégica y <strong>análisis de fondo</strong>.</p>
+                    </div>
+                    <div class="caja-superior">
+                        <h4 class="titulo-gigante">5. Evidencia Directa</h4>
+                        <p class="texto-gigante"><strong>Verbatims:</strong> Citas textuales extraídas de los grupos focales.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="accordion-container" style="margin-top: 30px; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; background: white;">
+                <button class="accordion-header" onclick="toggleAccordion()" style="width: 100%; padding: 20px; background: #f8f9fa; border: none; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                    <span style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: #333;">👥 BASE DE DATOS DE PARTICIPANTES (GRUPOS FOCALES)</span>
+                    <span id="acc-icon" style="color: #e10915; font-size: 1.5rem; font-weight: bold;">+</span>
+                </button>
+                
+                <div id="accordion-content" class="accordion-content" style="display: none; padding: 20px; overflow-x: auto; border-top: 1px solid #e0e0e0;">
+                    <table class="comparative-table">
+    <thead>
+        <tr>
+            <th>Fecha</th>
+            <th>Documento</th>
+            <th>Nombre Completo</th>
+            <th>Programa Académico</th>
+            <th>Modalidad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>12/02/2026</td><td>1028863261</td><td>Jaider Santiago Beltrán Veloza</td><td>Ingeniería de Sistemas</td><td>Presencial</td></tr>
+        <tr><td>12/02/2026</td><td>1011086220</td><td>David Alejandro Hernández Rodríguez</td><td>Ingeniería de Sistemas</td><td>Presencial</td></tr>
+        <tr><td>12/02/2026</td><td>1031171124</td><td>Juan Esteban Bernal</td><td>Administración de Empresas</td><td>Presencial</td></tr>
+        <tr><td>12/02/2026</td><td>1010156798</td><td>Cristian Alexis Trujillo Padilla</td><td>Producción Audiovisual</td><td>Presencial</td></tr>
+        <tr><td>12/02/2026</td><td>1233501755</td><td>Tifany Cifuentes Cabrales</td><td>Diseño Gráfico</td><td>Presencial</td></tr>
+        <tr><td>12/02/2026</td><td>1016716433</td><td>Deiby Sebastián Gil Gallo</td><td>Diseño Gráfico</td><td>Presencial</td></tr>
+        <tr><td>12/02/2026</td><td>1013108384</td><td>Juan Esteban Marentes Caballero</td><td>Ingeniería Electrónica</td><td>Presencial</td></tr>
+        <tr><td>12/02/2026</td><td>1027151205</td><td>Laura Ximena Penagos Fernández</td><td>Diseño Gráfico</td><td>Presencial</td></tr>
+        <tr><td>12/02/2026</td><td>1025530709</td><td>Juan Sebastián Amado Rodríguez</td><td>Ingeniería Electrónica</td><td>Presencial</td></tr>
+        <tr><td>12/02/2026</td><td>1000850787</td><td>Juan David Velandia Guayacundo</td><td>Ingeniería de Sistemas</td><td>Presencial</td></tr>
+        <tr><td>12/02/2026</td><td>1072961025</td><td>Andrés Felipe Castro Rodriguez</td><td>Administración Deportiva</td><td>Presencial</td></tr>
+        <tr><td>12/02/2026</td><td>1024504661</td><td>Daniel Esteban Murcia Velásquez</td><td>Ingeniería de Sistemas</td><td>Presencial</td></tr>
+        <tr><td>13/02/2026</td><td>1011089116</td><td>Johan Jaramillo Mejía</td><td>Ingeniería de Sistemas</td><td>Presencial</td></tr>
+        <tr><td>11/03/2026</td><td>1101685660</td><td>Emerson Sair Salazar Corzo</td><td>Diseño Gráfico</td><td>Virtual</td></tr>
+        <tr><td>11/03/2026</td><td>1082979523</td><td>Breiner Zamir Hernandez Ñustes</td><td>Administración de Empresas</td><td>Virtual</td></tr>
+        <tr><td>12/03/2026</td><td>1030664643</td><td>Elkin Gómez</td><td>Publicidad y Mercadeo</td><td>Virtual</td></tr>
+        <tr><td>12/03/2026</td><td>10967574</td><td>Alber Manuel Martinez Palencia</td><td>Administración de Empresas</td><td>Virtual</td></tr>
+        <tr><td>12/03/2026</td><td>1021315566</td><td>Juan Esteban Contreras Lozano</td><td>Producción Audiovisual</td><td>Virtual</td></tr>
+        <tr><td>12/03/2026</td><td>1003721769</td><td>Jose Mario Llorente Machado</td><td>Administración de Empresas</td><td>Virtual</td></tr>
+        <tr><td>12/03/2026</td><td>1042433398</td><td>Hugo Rafael Mercado Bonett</td><td>Ingeniería Industrial</td><td>Virtual</td></tr>
+        <tr><td>12/03/2026</td><td>1072425446</td><td>Carlos Andres Penagos Cristobal</td><td>Contaduría Pública</td><td>Virtual</td></tr>
+        <tr><td>12/03/2026</td><td>1082958380</td><td>Dayana Melisa Perez Carrillo</td><td>Administración de Empresas</td><td>Virtual</td></tr>
+        <tr><td>12/03/2026</td><td>1001186234</td><td>Carlos Alberto Poveda Nuñez</td><td>Ingeniería de Sistemas</td><td>Presencial</td></tr>
+        <tr><td>12/03/2026</td><td>1070008398</td><td>Johanna Patricia Ramos Orjuela</td><td>Contaduría Pública</td><td>Virtual</td></tr>
+    </tbody>
+</table>
+                </div>
+            </div>
+
+            <section id="comparativa" class="tab-pane active" style="margin-top: 50px;">
+                <h2 class="section-subtitle">Análisis Comparativo Evolutivo: Presencial vs. Virtual</h2>
+                
+                <div class="explicacion-box">
+                    <h3 class="metodologia-titulo">Metodología del Score Semántico</h3>
+                    
+                </div>
+
+                <table class="comparative-table">
+                    <thead>
+                        <tr>
+                            <th>Subcategoría</th>
+                            <th>Métrica Clave</th>
+                            <th>Resultado Feb (Presencial)</th>
+                            <th>Resultado Mar (Virtual)</th>
+                            <th>Calor</th>
+                            <th>Explicación Operativa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Sede y Entorno</strong></td>
+                            <td>Polaridad de Sentimiento</td>
+                            <td><span class="metric-badge">+0.82</span><br><small>Valoración de espacios físicos y terrazas.</small></td>
+                            <td><span class="metric-badge">+0.90</span><br><small>Soberanía del tiempo y facilidad digital.</small></td>
+                            <td class="calor-up" style="color: #28a745; text-align: center;">▲</td>
+                            <td>Para el virtual, el <span class="highlight-text">LMS es su hogar</span>. Valoran la eliminación del desplazamiento como una ganancia de calidad de vida.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Canales de Servicio</strong></td>
+                            <td>Score de Eficacia (1-5)</td>
+                            <td><span class="metric-badge">3.2</span><br><small>Lentitud con opción presencial.</small></td>
+                            <td><span class="metric-badge">1.2</span><br><small>Bloqueo sistémico sin respuesta.</small></td>
+                            <td class="calor-down" style="color: #dc3545; text-align: center;">▼</td>
+                            <td>El virtual no tiene "Plan B". Un error en <span class="highlight-text">CamiTicket</span> se percibe como abandono financiero absoluto.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Carga Académica</strong></td>
+                            <td>Carga académica</td>
+                            <td><span class="metric-badge">15%</span><br><small>Fatiga por materias disciplinares.</small></td>
+                            <td><span class="metric-badge">45%</span><br><small>Crisis por pérdida de créditos.</small></td>
+                            <td class="calor-down" style="color: #dc3545; text-align: center;">▼</td>
+                            <td>El <span class="highlight-text">"Trauma de Reintegro"</span> genera insatisfacción, a veces los creditos no parecen completos en SINU</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Docencia</strong></td>
+                            <td>Satisfacción (CSAT)</td>
+                            <td><span class="metric-badge">4.7</span><br><small>Conexión humana en aula.</small></td>
+                            <td><span class="metric-badge">4.4</span><br><small>Guía académica estable.</small></td>
+                            <td class="calor-stable" style="color: #ffc107; text-align: center;">●</td>
+                            <td>El profesor es respetado, pero el virtual exige <span class="highlight-text">actualización de contenidos</span> multimedia y software moderno.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pertenencia</strong></td>
+                            <td>Índice de Conexión</td>
+                            <td><span class="metric-badge">ALTA</span><br><small>Vínculo social y cultural.</small></td>
+                            <td><span class="metric-badge">BAJA</span><br><small>Vínculo por resolución.</small></td>
+                            <td class="calor-down" style="color: #dc3545; text-align: center;">▼</td>
+                            <td>El virtual se siente CUNista solo si la universidad <span class="highlight-text">le resuelve</span>. Si el proceso falla, la conexión desaparece.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+<section id="comparativa" class="tab-pane active">
+    <h2 class="section-subtitle">Análisis Comparativo por Ciudad</h2>
+    
+    <div class="table-wrapper">
+        <table class="regional-analysis-table">
+            <thead>
+                <tr>
+                    <th>Categoría : Subcategoría</th>
+                    <th>Sincelejo</th>
+                    <th>Montería</th>
+                    <th>Santa Marta</th>
+                    <th>Neiva</th>
+                    <th>Ibagué</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="category-cell"><strong>Académico: Pensum y Calidad</strong></td>
+                    <td><span class="score green">9.5</span> Nivel más alto, enfoque total en IA y actualización constante de contenidos.</td>
+                    <td><span class="score">9.0</span> Contenido sólido pero limitado a la teoría por falta crítica de equipos físicos.</td>
+                    <td><span class="score">9.0</span> Estudiantes valoran la aplicabilidad laboral y la ruta clara hacia el empleo.</td>
+                    <td><span class="score">8.0</span> Contenidos modernos aunque existe una demanda insatisfecha por temas de ciberseguridad.</td>
+                    <td><span class="score">8.5</span> Bien calificado gracias a la efectiva integración de diversos contenidos digitales.</td>
+                </tr>
+                <tr class="row-alert">
+                    <td class="category-cell"><strong>Académico: Prácticas</strong></td>
+                    <td><span class="score red">3.0</span> Bloqueo operativo por falta de convenios locales y exceso de burocracia.</td>
+                    <td class="critical-cell"><span class="score red">2.0</span> Punto más crítico; estudiantes estancados en octavo semestre sin poder avanzar.</td>
+                    <td><span class="score red">3.0</span> Limbo administrativo; perciben que los contratos no se firman a tiempo en Bogotá.</td>
+                    <td><span class="score red">3.0</span> Desinformación total; no hay claridad sobre procesos, lugares o responsables.</td>
+                    <td><span class="score red">2.5</span> Incertidumbre y miedo real a no graduarse por falta de empresas vinculadas.</td>
+                </tr>
+                <tr>
+                    <td class="category-cell"><strong>Tecnológico: Hardware y Aula</strong></td>
+                    <td><span class="score">4.0</span> Televisores pequeños; los estudiantes de atrás no logran ver el código.</td>
+                    <td class="critical-cell"><span class="score red">1.0</span> Crisis total; faltan CPUs para desarmar y herramientas básicas como ponchadoras.</td>
+                    <td><span class="score">4.0</span> Equipos lentos que no soportan los requerimientos del software de ingeniería.</td>
+                    <td><span class="score">5.0</span> Equipos básicos con mantenimiento deficiente en periféricos como mouses y teclados.</td>
+                    <td><span class="score">5.0</span> Hardware limitado; la operación depende totalmente de que el alumno traiga su PC.</td>
+                </tr>
+                <tr class="row-alert">
+                    <td class="category-cell"><strong>Servicio: CamiTicket</strong></td>
+                    <td><span class="score red">2.0</span> Respuestas frías; la sede carece de autonomía para resolver problemas directamente.</td>
+                    <td><span class="score red">1.5</span> Nivel más bajo; tickets archivados sin respuesta efectiva durante semanas.</td>
+                    <td><span class="score red">2.0</span> Lenguaje burocrático; cierran casos arbitrariamente sin aportar soluciones reales.</td>
+                    <td><span class="score red">2.0</span> Respuestas robóticas estandarizadas que no corresponden a la solicitud enviada.</td>
+                    <td><span class="score red">1.5</span> Gran frustración; el sistema se percibe como un muro burocrático insuperable.</td>
+                </tr>
+                <tr>
+                    <td class="category-cell"><strong>Servicio: Bienestar</strong></td>
+                    <td class="success-cell"><span class="score green">10.0</span> Perfección total; es el rostro humano que salva la experiencia de sede.</td>
+                    <td><span class="score">9.0</span> Muy bueno; mejora notable con entrega de uniformes y kits deportivos.</td>
+                    <td><span class="score">9.5</span> Actúan como mediadores efectivos cuando los procesos administrativos fallan.</td>
+                    <td><span class="score">9.5</span> Único canal que genera felicidad real y sentido de pertenencia institucional.</td>
+                    <td><span class="score">9.5</span> Pilar de sede; canal de comunicación efectivo, cercano y resolutivo.</td>
+                </tr>
+                <tr>
+                    <td class="category-cell"><strong>Infraestructura: Física</strong></td>
+                    <td><span class="score">5.0</span> Calor extremo; urgen zonas de descanso adecuadas y servicio de cafetería.</td>
+                    <td><span class="score">6.0</span> Ambiente agradable pero afectado por la mala difusión de eventos locales.</td>
+                    <td><span class="score red">4.5</span> Urgencia vital; los sistemas de aire acondicionado no logran enfriar salones.</td>
+                    <td><span class="score">5.0</span> Edificio tipo oficina; falta alma de campus y bebederos de agua.</td>
+                    <td><span class="score">5.0</span> Problemas serios de climatización y ruido excesivo entre salones vecinos.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <div class="item-container">
+    <table class="regional-analysis-table insights-table">
+        <thead>
+            <tr>
+                <th>Montería vs. el resto en Tecnología</th>
+                <th>Sincelejo: Referente Académico</th>
+                <th>Lo adminsitrativo, oportunidad de mejora</th>
+                <th>Bienestar: El "Héroe" Local</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="neutral-cell">
+                    Mientras que Sincelejo o Ibagué reportan limitaciones menores, 
+                    <strong>Montería</strong> carece de insumos físicos básicos. Es una brecha de dotación crítica.
+                </td>
+                <td class="success-cell">
+                    Es la sede con mayor orgullo académico. Mientras otros valoran el pensum, 
+                    en <strong>Sincelejo</strong> es su principal bandera de identidad.
+                </td>
+                <td class="neutral-cell">
+                    Los fallos en <strong>CamiTicket y Prácticas</strong> son idénticos en todo el país, 
+                    confirmando un problema centralizado en Bogotá, no en las sedes.
+                </td>
+                <td class="success-cell">
+                    Sin excepción, es lo único que funciona perfectamente. El estudiante de la 
+                    <strong>CUN</strong> valora profundamente la atención humana presencial.
+                </td>
+               
+            </tr>
+        </tbody>
+    </table>
+</div>
+</section>
+
+<seccion>
+    <div class = "slides">
+            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTR9WwRwPGd0lTz35zc57aGrCvgGKlrPq21J64Ih_JGlXs4ga_efpC9P6jLFLW65jc3xTUt_A3sXANV/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="1536" height="893" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div>
+</seccion>    
+
+        </main>
+    </div>
+
+    <script>
+        function toggleAccordion() {
+            const content = document.getElementById('accordion-content');
+            const icon = document.getElementById('acc-icon');
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                icon.innerText = "+";
+            } else {
+                content.style.display = "block";
+                icon.innerText = "-";
+            }
+        }
+    </script>
+    <script src="script.js"></script>C:\Users\juan_garnicac\Documents\ProyectosVisual\EschuahEnvivo\febrero-12\Grupo focal 3_SC.json
+</body>
+</html>
