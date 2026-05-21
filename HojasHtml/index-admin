@@ -1,1 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Auditoría de Escucha Activa CUN</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./estilos/estiloTablas.css">
+    <link rel="stylesheet" href="./estilos/style.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            CUN ANALYTICS
+        </div>
+
+        <nav class="nav-menu">
+
+            <ul class="nav-list">
+
+                <li>
+                    <button class="nav-btn active" data-tab="inicio">
+                        Resumen Ejecutivo
+                    </button>
+                </li>
+
+                <div class="nav-label">
+                    CIUDADES
+                </div>
+
+                <!-- SOLO LINKS GENERICOS -->
+                <li>
+                    <a href="./HojasHtml/Ibague.html" class="nav-btn">
+                        Link a Ciudad Uno
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="nav-btn">
+                        Link a Ciudad Dos
+                    </a>
+                </li>
+
+                <li>
+                    <button class="nav-btn" id="back-btn">
+                        Regresar
+                    </button>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </aside>
+
+    <!-- CONTENIDO -->
+    <main class="main-content">
+
+        <!-- RESUMEN -->
+        <section id="inicio" class="tab-pane active">
+
+            <h1 class="main-title">
+                Resumen Ejecutivo: Auditoría de Escucha Activa
+            </h1>
+
+            <div class="welcome-card">
+
+                <h2 class="section-subtitle">
+                    Especificaciones del Estudio
+                </h2>
+
+                <p class="welcome-text">
+                    Este informe contiene hallazgos obtenidos mediante grupos focales
+                    realizados con estudiantes de diferentes sedes y modalidades.
+                </p>
+
+            </div>
+
+            <!-- TARJETAS -->
+            <div class="contenedor-insights-gigante">
+
+                <div class="caja-superior">
+                    <h4 class="titulo-gigante">
+                        1. Métricas de Sentimiento
+                    </h4>
+
+                    <p class="texto-gigante">
+                        Análisis de Polaridad y Subjetividad.
+                    </p>
+                </div>
+
+                <div class="caja-superior">
+                    <h4 class="titulo-gigante">
+                        2. Métricas de Gestión
+                    </h4>
+
+                    <p class="texto-gigante">
+                        Evaluación técnica del servicio.
+                    </p>
+                </div>
+
+                <div class="caja-superior">
+                    <h4 class="titulo-gigante">
+                        3. Intensidad y Esfuerzo
+                    </h4>
+
+                    <p class="texto-gigante">
+                        Evaluación del Customer Effort Score.
+                    </p>
+                </div>
+
+                <div class="caja-superior">
+                    <h4 class="titulo-gigante">
+                        4. Insights Estratégicos
+                    </h4>
+
+                    <p class="texto-gigante">
+                        Interpretación cualitativa de hallazgos.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- TABLA COMPARATIVA -->
+        <section id="comparativa" class="tab-pane active" style="margin-top: 50px;">
+
+            <h2 class="section-subtitle">
+                Análisis Comparativo por Ciudad
+            </h2>
+
+            <div class="table-wrapper">
+
+                <table class="regional-analysis-table">
+
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Ibagué</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>
+                                Académico
+                            </td>
+
+                            <td>
+                                ¡Por llenar!
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Servicio
+                            </td>
+
+                            <td>
+                                ¡Por llenar!
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Tecnología
+                            </td>
+
+                            <td>
+                                ¡Por llenar!
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Infraestructura
+                            </td>
+
+                            <td>
+                                ¡Por llenar!
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Bienestar
+                            </td>
+
+                            <td>
+                                ¡Por llenar!
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script>
+
+    function toggleAccordion() {
+
+        const content = document.getElementById('accordion-content');
+        const icon = document.getElementById('acc-icon');
+
+        if (content.style.display === "block") {
+
+            content.style.display = "none";
+            icon.innerText = "+";
+
+        } else {
+
+            content.style.display = "block";
+            icon.innerText = "-";
+
+        }
+    }
+
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
