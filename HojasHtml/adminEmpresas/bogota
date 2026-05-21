@@ -1,1 +1,802 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz de Auditoría Final - Sede Bogotá</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../estilos/style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="brand">CUN ANALYTICS</div>
+        <nav class="nav-menu">
+            <button class="nav-btn active" onclick="openTab(event, 'academico')">ACADÉMICO</button>
+            <button class="nav-btn" onclick="openTab(event, 'tecnologico')">TECNOLÓGICO</button>
+            <button class="nav-btn" onclick="openTab(event, 'servicio')">SERVICIO AL CLIENTE</button>
+            <button class="nav-btn" onclick="openTab(event, 'bienestar')">BIENESTAR</button>
+            <button class="nav-btn" onclick="openTab(event, 'pertenencia')">SENTIDO DE PERTENENCIA</button>
+            <li><button class="nav-btn" id="back-btn">Regresar</button></li>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <!-- SECCIÓN ACADÉMICO -->
+        <section id="academico" class="tab-pane active" style="display: block;">
+            <h1 class="main-title">ACADÉMICO</h1>
+            <section>
+                <div class="item-container">
+                    <div class="container mt-4">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped table-hover align-middle text-center">
+                                <thead class="table-primary">
+                                    <tr>
+                                        <th>Población</th>
+                                        <th>Carrera</th>
+                                        <th>Semestres</th>
+                                        <th>Hombres</th>
+                                        <th>Mujeres</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-start">Estudiantes</th>
+                                        <td class="text-start">Administración de Empresas</th>
+                                        <td class="text-start">2do y 3er semestre</th>
+                                        <td>3</th>
+                                        <td>3</th>
+                                        <td><strong>6</strong></th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Calidad del Pensum -->
+            <div class="item-container">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Subcategoría</th>
+                            <th>Polaridad</th>
+                            <th>Score / Eficacia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ACADÉMICO</th>
+                            <td>Calidad del Pensum y Actualización</th>
+                            <td><span class="badge-pos">Positiva (+0.85)</span></th>
+                            <td>9.0 / 10</th>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><strong>Análisis (CES):</strong> Bajo. Los estudiantes valoran positivamente los contenidos y la estructura de la carrera.</th>
+                        </td>
+                    </tbody>
+                </table>
+                <div class="item-header">Análisis Interpretativo (10 Puntos)</div>
+                <ul class="analysis-list">
+                    <table class="tabla-insights">
+                        <tr>
+                            <td>1. Los contenidos son percibidos como útiles y prácticos.</th>
+                            <td>2. La virtualidad permite manejar el tiempo entre trabajo y estudio.</th>
+                        </tr>
+                        <tr>
+                            <td>3. El modelo autónomo exige mayor dedicación e investigación.</th>
+                            <td>4. Las grabaciones de clases son un apoyo invaluable.</th>
+                        </tr>
+                        <tr>
+                            <td>5. Los estudiantes valoran la flexibilidad de horarios.</th>
+                            <td>6. La estructura de la carrera es clara y motivante.</th>
+                        </tr>
+                        <tr>
+                            <td>7. Los contenidos se ajustan a las necesidades del mercado laboral.</th>
+                            <td>8. La progresión entre semestres es lógica y coherente.</th>
+                        </tr>
+                        <tr>
+                            <td>9. El precio accesible fue un factor determinante para elegir la CUN.</th>
+                            <td>10. La formación virtual les permite desarrollarse profesionalmente mientras trabajan.</th>
+                        </tr>
+                    </table>
+                </ul>
+                <div class="verbatim-container">
+                    <div class="verbatim">"La verdad ha sido algo muy novedoso, son muchas formas de aprender diferentes de cada profesor." – Edison</div>
+                    <div class="verbatim">"Ha sido muy práctico porque uno puede hacer otras cosas aparte de los estudios." – Harik</div>
+                    <div class="verbatim">"El modelo nos exige a nosotros como estudiantes, hay que ser muy autónomo." – Diego</div>
+                </div>
+                <button class="btn-ticket" type="button" data-bs-toggle="collapse" data-bs-target="#tk_pensum">Tickets</button>
+                <div class="collapse" id="tk_pensum">
+                    <div class="ticket-collapse">
+                        <h6>Métrica - Calidad del Pensum</h6>
+                        <div style="width: 100%; max-width: 600px; margin: auto;">
+                            <canvas id="Grafica_Calidad_Pensum" height="120"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Docencia y Metodología -->
+            <div class="item-container">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Subcategoría</th>
+                            <th>Polaridad</th>
+                            <th>Score / Eficacia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ACADÉMICO</th>
+                            <td>Docencia y Metodología</th>
+                            <td><span class="badge-warn">Mixta</span></th>
+                            <td>7.5 / 10</th>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><strong>Análisis (CES):</strong> Medio. La mayoría de los docentes son buenos, pero se reportó un caso grave de maltrato y falta de pedagogía (profesor Nicolás).</th>
+                        </tr>
+                        <tr class="eval-docente">
+                            <td colspan="4" class="p-3">
+                                <strong class="me-2">Promedio Calificación evaluación docente</strong>
+                                <span class="badge border border-success-emphasis text-success-emphasis bg-success-subtle p-2 px-3">4.20</span>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="item-header">Análisis Interpretativo (10 Puntos)</div>
+                <ul class="analysis-list">
+                    <table class="tabla-insights">
+                        <tr>
+                            <td>1. La mayoría de los docentes son respetuosos y responden dudas.</th>
+                            <td>2. Cada profesor tiene una metodología diferente, válida pero a veces confusa.</th>
+                        </tr>
+                        <tr>
+                            <td>3. Existe un caso grave de maltrato pedagógico (profesor Nicolás).</th>
+                            <td>4. Este profesor humilló a una estudiante por no poder conectarse dos clases.</th>
+                        </td>
+                        <tr>
+                            <td>5. Sus retroalimentaciones no coincidían con la nota final.</th>
+                            <td>6. Varios estudiantes estuvieron a punto de perder la materia por su culpa.</th>
+                        </tr>
+                        <tr>
+                            <td>7. Otros docentes son flexibles y explican las veces que sea necesario.</th>
+                            <td>8. Las diferencias en la organización de contenidos generan confusiones.</th>
+                        </tr>
+                        <tr>
+                            <td>9. Se requiere un estándar mínimo de calidad pedagógica para todos los profesores.</th>
+                            <td>10. La falta de claridad en la evaluación afecta la confianza del estudiante.</th>
+                        </tr>
+                    </table>
+                </ul>
+                <div class="verbatim-container">
+                    <div class="verbatim">"El profesor nunca se dedicó a que uno aprendiera, sino a que uno se tirara la materia. Yo lo siento así." – Cindy</div>
+                    <div class="verbatim">"Le hice una pregunta y fue como una respuesta como si no sabe ni dónde estás parada, no fue la adecuada." – Cindy</div>
+                    <div class="verbatim">"No he tenido ninguna novedad con ningún profesor, han sido muy acertados." – Diego</div>
+                </div>
+                <button class="btn-ticket" type="button" data-bs-toggle="collapse" data-bs-target="#tk_docencia">Tickets</button>
+                <div class="collapse" id="tk_docencia">
+                    <div class="ticket-collapse">
+                        <h6>Métrica - Docencia y Metodología</h6>
+                        <div style="width: 100%; max-width: 600px; margin: auto;">
+                            <canvas id="Grafica_Docencia_Metodologia"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prácticas Profesionales -->
+            <div class="item-container">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Subcategoría</th>
+                            <th>Polaridad</th>
+                            <th>Score / Eficacia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ACADÉMICO</th>
+                            <td>Prácticas Profesionales</th>
+                            <td><span class="badge-neutral">Sin datos</span></th>
+                            <td><span class="text-muted">No reportado</span></th>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><strong>Análisis (CES):</strong> No se reportaron observaciones sobre prácticas profesionales en esta sesión (estudiantes de primeros semestres).</th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="item-header">Análisis Interpretativo (10 Puntos)</div>
+                <ul class="analysis-list">
+                    <table class="tabla-insights">
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                    </table>
+                </ul>
+                <div class="verbatim-container">
+                    <div class="verbatim">--</div>
+                    <div class="verbatim">--</div>
+                    <div class="verbatim">--</div>
+                </div>
+                <button class="btn-ticket" type="button" data-bs-toggle="collapse" data-bs-target="#tk_practicas">Tickets</button>
+                <div class="collapse" id="tk_practicas">
+                    <div class="ticket-collapse">
+                        <h6>Métrica - Prácticas Profesionales</h6>
+                        <div style="width: 100%; max-width: 600px; margin: auto;">
+                            <canvas id="Grafica_Practicas_Profesionales"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN TECNOLÓGICO -->
+        <section id="tecnologico" class="tab-pane">
+            <h1 class="main-title">TECNOLÓGICO</h1>
+
+            <!-- Plataforma CDigital -->
+            <div class="item-container">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Subcategoría</th>
+                            <th>Polaridad</th>
+                            <th>Score / Eficacia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>TECNOLÓGICO</th>
+                            <td>Plataforma CDigital</th>
+                            <td><span class="badge-pos">Positiva (+0.90)</span></th>
+                            <td>9.0 / 10</th>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><strong>Análisis (CES):</strong> Bajo. La plataforma es estable, disponible 24/7 y fácil de usar.</th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="item-header">Análisis Interpretativo (10 Puntos)</div>
+                <ul class="analysis-list">
+                    <table class="tabla-insights">
+                        <tr>
+                            <td>1. La plataforma nunca se ha caído ni ha presentado errores.</th>
+                            <td>2. Está disponible 24 horas al día, 7 días a la semana.</th>
+                        </tr>
+                        <td>
+                            <td>3. Es fácil de usar y los pasos son claros.</th>
+                            <td>4. Permite cargar trabajos sin inconvenientes.</th>
+                        </table>
+                        <tr>
+                            <td>5. Los horarios de las evaluaciones siempre se respetan.</th>
+                            <td>6. Se puede acceder desde cualquier dispositivo.</th>
+                        <tr>
+                        <tr>
+                            <td>7. La plataforma de inglés (Dexway) también es muy buena.</th>
+                            <td>8. Tiene mucho material extra que ayuda al aprendizaje.</th>
+                        </tr>
+                        <tr>
+                            <td>9. Es el principal soporte para la modalidad virtual.</th>
+                            <td>10. Su estabilidad genera confianza en los estudiantes.</th>
+                        </tr>
+                    </tr>
+                </ul>
+                <div class="verbatim-container">
+                    <div class="verbatim">"El Cedi Digital hasta el momento nunca me ha fallado, las evaluaciones siempre abren bien." – Diego</div>
+                    <div class="verbatim">"Siempre ha estado disponible las 24/7, he ingresado muy tarde de la noche y está disponible." – Cindy</div>
+                    <div class="verbatim">"La plataforma de inglés también me parece muy buena, tiene mucho material extra." – Diego</div>
+                </div>
+                <button class="btn-ticket" type="button" data-bs-toggle="collapse" data-bs-target="#tk_cdigital">Tickets</button>
+                <div class="collapse" id="tk_cdigital">
+                    <div class="ticket-collapse">
+                        <h6>Métrica - Plataforma CDigital</h6>
+                        <div style="width: 100%; max-width: 600px; margin: auto;">
+                            <canvas id="Grafica_Tecnologico_Tickets"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Herramientas en Aula (Hardware) -->
+            <div class="item-container">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Subcategoría</th>
+                            <th>Polaridad</th>
+                            <th>Score / Eficacia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>TECNOLÓGICO</th>
+                            <td>Herramientas en Aula (Hardware)</th>
+                            <td><span class="badge-neutral">Sin datos</span></th>
+                            <td><span class="text-muted">No reportado</span></th>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><strong>Análisis (CES):</strong> No se reportaron observaciones sobre herramientas físicas o hardware (modalidad virtual).</th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="item-header">Análisis Interpretativo (10 Puntos)</div>
+                <ul class="analysis-list">
+                    <table class="tabla-insights">
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                    </table>
+                </ul>
+                <div class="verbatim-container">
+                    <div class="verbatim">--</div>
+                    <div class="verbatim">--</div>
+                    <div class="verbatim">--</div>
+                </div>
+                <button class="btn-ticket" type="button" data-bs-toggle="collapse" data-bs-target="#tk_hardware">Tickets</button>
+                <div class="collapse" id="tk_hardware">
+                    <div class="ticket-collapse">
+                        <h6>Métrica - Herramientas en Aula</h6>
+                        <div style="width: 100%; max-width: 600px; margin: auto;">
+                            <canvas id="Grafica_Herramientas_Aula"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Infraestructura de Laboratorio -->
+            <div class="item-container">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Subcategoría</th>
+                            <th>Polaridad</th>
+                            <th>Score / Eficacia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>TECNOLÓGICO</th>
+                            <td>Infraestructura de Laboratorio</th>
+                            <td><span class="badge-neutral">Sin datos</span></th>
+                            <td><span class="text-muted">No reportado</span></th>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><strong>Análisis (CES):</strong> No se reportaron observaciones sobre laboratorios (modalidad virtual).</th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="item-header">Análisis Interpretativo (10 Puntos)</div>
+                <ul class="analysis-list">
+                    <table class="tabla-insights">
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </td>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </table>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                    </table>
+                </ul>
+                <div class="verbatim-container">
+                    <div class="verbatim">--</div>
+                    <div class="verbatim">--</div>
+                    <div class="verbatim">--</div>
+                </div>
+                <button class="btn-ticket" type="button" data-bs-toggle="collapse" data-bs-target="#tk_lab">Tickets</button>
+                <div class="collapse" id="tk_lab">
+                    <div class="ticket-collapse">
+                        <h6>Métrica - Infraestructura de Laboratorio</h6>
+                        <div style="width: 100%; max-width: 600px; margin: auto;">
+                            <canvas id="Grafica_Laboratorio"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN SERVICIO AL CLIENTE -->
+        <section id="servicio" class="tab-pane">
+            <h1 class="main-title">SERVICIO AL CLIENTE</h1>
+
+            <!-- CamiTicket -->
+            <div class="item-container">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Subcategoría</th>
+                            <th>Polaridad</th>
+                            <th>Score / Eficacia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>SERVICIO AL CLIENTE</th>
+                            <td>CamiTicket y Respuesta</th>
+                            <td><span class="badge-critico">Crítica (casos graves)</span></th>
+                            <td>4.0 / 10</th>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><strong>Análisis (CES):</strong> Alto. Existen casos graves de falta de respuesta que llevaron a pérdida de semestres enteros. Otros estudiantes reportan atención aceptable.</th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="item-header">Análisis Interpretativo (10 Puntos)</div>
+                <ul class="analysis-list">
+                    <table class="tabla-insights">
+                        <tr>
+                            <td>1. Un estudiante perdió un semestre completo porque su pago no se reflejó y nadie respondió.</th>
+                            <td>2. Cuando se necesita hacer el pago, llaman todos los días; cuando ya se pagó, no contestan.</th>
+                        </tr>
+                        <tr>
+                            <td>3. Cindy no sabe ni dónde queda una sede presencial en Cartagena.</th>
+                            <td>4. Los números de WhatsApp cambian o no responden, quedan en visto.</th>
+                        </tr>
+                        <tr>
+                            <td>5. Harik reporta que a él sí le han resuelto sus CamiTicket.</th>
+                            <td>6. No hay un canal de comunicación efectivo para estudiantes fuera de Bogotá.</th>
+                        </tr>
+                        <tr>
+                            <td>7. La falta de respuesta genera desesperanza y pensamientos de retiro.</th>
+                            <td>8. Diego tuvo que ir presencialmente a la sede de Bogotá para que le aplicaran el pago.</th>
+                        </tr>
+                        <tr>
+                            <td>9. Los estudiantes de otras ciudades se sienten abandonados.</th>
+                            <td>10. Se necesita urgente un canal de atención más ágil y humano.</th>
+                        </tr>
+                    </table>
+                </ul>
+                <div class="verbatim-container">
+                    <div class="verbatim">"Yo hice el pago y nunca apareció. Cuando hacía falta pagar, me llamaban todos los días. Cuando ya se hizo el pago, ya no me llamaron y nunca más me contestaron." – Diego</div>
+                    <div class="verbatim">"No sé ni dónde queda la sede principal aquí en Cartagena, los números de WhatsApp cambian, uno escribe y nadie le da respuesta." – Cindy</div>
+                    <div class="verbatim">"Yo normalmente cuando tengo algún inconveniente pongo el CamiTicket y las veces que he tenido inconveniente me han resuelto." – Harik</div>
+                </div>
+                <button class="btn-ticket" type="button" data-bs-toggle="collapse" data-bs-target="#tk_camiticket">Tickets</button>
+                <div class="collapse" id="tk_camiticket">
+                    <div class="ticket-collapse">
+                        <h6>Métrica - CamiTicket</h6>
+                        <div style="width: 100%; max-width: 600px; margin: auto;">
+                            <canvas id="Grafica_CamiTicket"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bienestar Institucional -->
+            <div class="item-container">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Subcategoría</th>
+                            <th>Polaridad</th>
+                            <th>Score / Eficacia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>SERVICIO AL CLIENTE</th>
+                            <td>Bienestar Institucional</th>
+                            <td><span class="badge-neutral">Sin datos</span></th>
+                            <td><span class="text-muted">No reportado</span></th>
+                        </tr>
+                        </tr>
+                            <td colspan="4"><strong>Análisis (CES):</strong> No se reportaron observaciones sobre Bienestar en esta sesión.</th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="item-header">Análisis Interpretativo (10 Puntos)</div>
+                <ul class="analysis-list">
+                    <table class="tabla-insights">
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                    </table>
+                </ul>
+                <div class="verbatim-container">
+                    <div class="verbatim">--</div>
+                    <div class="verbatim">--</div>
+                    <div class="verbatim">--</div>
+                </div>
+                <button class="btn-ticket" type="button" data-bs-toggle="collapse" data-bs-target="#tk_bienestar">Tickets</button>
+                <div class="collapse" id="tk_bienestar">
+                    <div class="ticket-collapse">
+                        <h6>Métrica - Bienestar Institucional</h6>
+                        <div style="width: 100%; max-width: 600px; margin: auto;">
+                            <canvas id="Grafica_Bienestar_Institucional"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INFRAESTRUCTURA (Comodidad y Servicios Físicos) -->
+            <div class="item-container">
+                <h1 class="main-title" style="font-size: 1.8rem; margin-top: 2rem;">INFRAESTRUCTURA</h1>
+                <div class="sub-title">Comodidad y Servicios Físicos</div>
+                <table class="table table-bordered" style="margin-top: 1rem;">
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Subcategoría</th>
+                            <th>Polaridad</th>
+                            <th>Score / Eficacia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="odd">
+                            <td>INFRAESTRUCTURA</th>
+                            <td>Comodidad y Servicios Físicos</th>
+                            <td><span class="badge-neutral">Sin datos</span></th>
+                            <td><span class="text-muted">No reportado</span></th>
+                        </tr>
+                        <tr class="even">
+                            <td colspan="4"><strong>Análisis (CES):</strong> No se reportaron observaciones sobre infraestructura física (modalidad virtual).</th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="item-header">Análisis Interpretativo (10 Puntos)</div>
+                <ul class="analysis-list">
+                    <table class="tabla-insights">
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        <tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                    </table>
+                </ul>
+                <div class="verbatim-container">
+                    <div class="verbatim">--</div>
+                    <div class="verbatim">--</div>
+                    <div class="verbatim">--</div>
+                </div>
+                <button class="btn-ticket" type="button" data-bs-toggle="collapse" data-bs-target="#tk_infra">Tickets</button>
+                <div class="collapse" id="tk_infra">
+                    <div class="ticket-collapse">
+                        <h6>Métrica - Comodidad y Servicios</h6>
+                        <div style="width: 100%; max-width: 600px; margin: auto;">
+                            <canvas id="Grafica_Comodidad_Servicios"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN BIENESTAR -->
+        <section id="bienestar" class="tab-pane">
+            <h1 class="main-title">BIENESTAR</h1>
+            <div class="sub-title">Beneficios y Becas</div>
+
+            <div class="item-container">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Subcategoría</th>
+                            <th>Polaridad</th>
+                            <th>Score / Eficacia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>BIENESTAR</th>
+                            <td>Beneficios y Becas</th>
+                            <td><span class="badge-neutral">Sin datos</span></th>
+                            <td><span class="text-muted">No reportado</span></th>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><strong>Análisis (CES):</strong> No se reportaron observaciones sobre beneficios y becas en esta sesión.</th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="item-header">Análisis Interpretativo (10 Puntos)</div>
+                <ul class="analysis-list">
+                    <table class="tabla-insights">
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        </tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        <tr>
+                    </table>
+                </ul>
+                <div class="verbatim-container">
+                    <div class="verbatim">--</div>
+                    <div class="verbatim">--</div>
+                    <div class="verbatim">--</div>
+                </div>
+                <button class="btn-ticket" type="button" data-bs-toggle="collapse" data-bs-target="#tk_becas">Tickets</button>
+                <div class="collapse" id="tk_becas">
+                    <div class="ticket-collapse">
+                        <h6>Métrica - Beneficios y Becas</h6>
+                        <div style="width: 100%; max-width: 600px; margin: auto;">
+                            <canvas id="Grafica_Beneficios_Becas"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN PERTENENCIA -->
+        <section id="pertenencia" class="tab-pane">
+            <h1 class="main-title">SENTIDO DE PERTENENCIA</h1>
+            <div class="sub-title">Identidad Cunista</div>
+
+            <div class="item-container">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Subcategoría</th>
+                            <th>Polaridad</th>
+                            <th>Score / Eficacia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>PERTENENCIA</th>
+                            <td>Orgullo y Recomendación</th>
+                            <td><span class="badge-pos">Positiva</span></th>
+                            <td>8.5 / 10</th>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><strong>Análisis (CES):</strong> Bajo. Los estudiantes eligieron la CUN por precio, flexibilidad y recomendaciones. A pesar de las fallas, quieren terminar su carrera.</th>
+                        </tr>
+                    </tbody>
+                <table>
+                <div class="item-header">Análisis Interpretativo (10 Puntos)</div>
+                <ul class="analysis-list">
+                    <table class="tabla-insights">
+                        <tr>
+                            <td>1. El precio accesible fue el principal motivador para elegir la CUN.</th>
+                            <td>2. La virtualidad 100% les permite trabajar y estudiar.</th>
+                        </tr>
+                        <tr>
+                            <td>3. La flexibilidad de horarios es muy valorada.</th>
+                            <td>4. Las facilidades de pago (C Te Ayuda) son un diferenciador clave.</th>
+                        </tr>
+                        <tr>
+                            <td>5. A pesar de las fallas, ninguno quiere retirarse (excepto Cindy por el profe).</th>
+                            <td>6. La mayoría tiene el proyecto de terminar la carrera.</th>
+                        </tr>
+                        <tr>
+                            <td>7. Algunos llegaron por recomendación de amigos o familiares.</th>
+                            <td>8. La seriedad del asesor fue determinante para elegir la CUN.</th>
+                        </tr>
+                        <tr>
+                            <td>9. Comparada con la Poli y Uniminuto, la CUN es más económica.</th>
+                            <td>10. El boca a boca positivo sigue atrayendo nuevos estudiantes.</th>
+                        </tr>
+                    </table>
+                </ul>
+                <div class="verbatim-container">
+                    <div class="verbatim">"El precio fue uno de los que me motivó y también la virtualidad, la flexibilidad de horario." – Cindy</div>
+                    <div class="verbatim">"Facilidades de pago, facilidades de horarios, se me favoreció para el momento en que estoy." – Diego</div>
+                    <div class="verbatim">"Lo mío fue más que todo por el algoritmo, me salió la CUN y la seriedad del asesor me pareció mucho mejor." – Harik</div>
+                </div>
+                <button class="btn-ticket" type="button" data-bs-toggle="collapse" data-bs-target="#tk_orgullo">Tickets</button>
+                <div class="collapse" id="tk_orgullo">
+                    <div class="ticket-collapse">
+                        <h6>Métrica - Orgullo y Recomendación</h6>
+                        <div style="width: 100%; max-width: 600px; margin: auto;">
+                            <canvas id="Grafica_Orgullo_Recomendacion"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/graficas.js"></script>
+    <script src="../js/funciones.js"></script>
+</body>
+</html>
