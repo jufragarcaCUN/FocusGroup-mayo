@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz de Auditoría Final - Sede Montería</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../estilos/style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="brand">CUN ANALYTICS</div>
+        <nav class="nav-menu">
+            <button class="nav-btn active" onclick="openTab(event, 'academico')">ACADÉMICO</button>
+            <button class="nav-btn" onclick="openTab(event, 'tecnologico')">TECNOLÓGICO</button>
+            <button class="nav-btn" onclick="openTab(event, 'servicio')">SERVICIO AL CLIENTE</button>
+            <button class="nav-btn" onclick="openTab(event, 'bienestar')">BIENESTAR</button>
+            <button class="nav-btn" onclick="openTab(event, 'pertenencia')">SENTIDO DE PERTENENCIA</button>
+            <li>
+                <a href="../../index.html">
+                    <button class="nav-btn" id="back-btn">Regresar</button>
+                </a>
+            </li>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <!-- SECCIÓN ACADÉMICO -->
+        <section id="academico" class="tab-pane active" style="display: block;">
+            <h1 class="main-title">ACADÉMICO</h1>
+            <section>
+                <div class="item-container">
+                    <div class="container mt-4">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped table-hover align-middle text-center">
+                                <thead class="table-primary">
+                                    <tr>
+                                        <th>Población</th>
+                                        <th>Carrera</th>
+                                        <th>Semestres</th>
+                                        <th>Hombres</th>
+                                        <th>Mujeres</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-start">Estudiantes</th>
+                                        <td class="text-start">Administración de Empresas</th>
+                                        <td class="text-start">3er semestre</th>
+                                        <td>0</th>
+                                        <td>1</th>
+                                        <td><strong>1</strong></th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Calidad del Pensum -->
+            <div class="item-container">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Subcategoría</th>
+                            <th>Polaridad</th>
+                            <th>Score / Eficacia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ACADÉMICO</th>
+                            <td>Calidad del Pensum y Actualización</th>
+                            <td><span class="badge-pos">Positiva</span></th>
+                            <td>8.5 / 10</th>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><strong>Análisis (CES):</strong> Bajo. Jennifer ha tenido una buena experiencia general con los docentes, aunque algunos son muy metódicos y poco interactivos.</th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="item-header">Análisis Interpretativo (10 Puntos)</div>
+                <ul class="analysis-list">
+                    <table class="tabla-insights">
+                        <tr>
+                            <td>1. En los primeros dos semestres, los docentes fueron muy dinámicos.</th>
+                            <td>2. En tercer semestre, algunos profesores son muy metódicos y cerrados.</th>
+                        </tr>
+                        <tr>
+                            <td>3. Los profesores jóvenes tienden a ser más dinámicos.</th>
+                            <td>4. Hay una falta de interacción en algunas clases.</th>
+                        </tr>
+                        <tr>
+                            <td>5. Jennifer valora la oportunidad de opinar y participar.</th>
+                            <td>6. Los contenidos son útiles para su trabajo.</th>
+                        </tr>
+                        <tr>
+                            <td>7. La profesora de Estadística fue muy dinámica.</th>
+                            <td>8. La profesora de Creación de Empresa también fue dinámica.</th>
+                        </tr>
+                        <tr>
+                            <td>9. La calidad docente en general es buena.</th>
+                            <td>10. Se requiere más interacción en las clases virtuales.</th>
+                        </tr>
+                    </tr>
+                </ul>
+                <div class="verbatim-container">
+                    <div class="verbatim">"En los dos primeros semestres súper bien, los profesores muy dinámicos, muy chéveres." – Jennifer</div>
+                    <div class="verbatim">"Hay algunos que son muy metódicos, muy cerrados, esto es lo que toca y esto es lo que se hace." – Jennifer</div>
+                    <div class="verbatim">"Hay profesores jóvenes que hacen las clases superdinámicas, todos participamos." – Jennifer</div>
+                </div>
+                <button class="btn-ticket" type="button" data-bs-toggle="collapse" data-bs-target="#tk_pensum">Tickets</button>
+                <div class="collapse" id="tk_pensum">
+                    <div class="ticket-collapse">
+                        <h6>Métrica - Calidad del Pensum</h6>
+                        <div style="width: 100%; max-width: 600px; margin: auto;">
+                            <canvas id="Grafica_Calidad_Pensum" height="120"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Docencia y Metodología -->
+            <div class="item-container">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Subcategoría</th>
+                            <th>Polaridad</th>
+                            <th>Score / Eficacia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ACADÉMICO</th>
+                            <td>Docencia y Metodología</th>
+                            <td><span class="badge-warn">Mixta</span></th>
+                            <td>7.5 / 10</th>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><strong>Análisis (CES):</strong> Medio. Algunos docentes son muy dinámicos, otros son metódicos y no permiten participación. La metodología de clases espejo no se está aplicando correctamente.</th>
+                        </tr>
+                        <tr class="eval-docente">
+                            <td colspan="4" class="p-3">
+                                <strong class="me-2">Promedio Calificación evaluación docente</strong>
+                                <span class="badge border border-success-emphasis text-success-emphasis bg-success-subtle p-2 px-3">4.50</span>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="item-header">Análisis Interpretativo (10 Puntos)</div>
+                <ul class="analysis-list">
+                    <table class="tabla-insights">
+                        <tr>
+                            <td>1. Hay docentes muy dinámicos que fomentan la participación.</th>
+                            <td>2. Otros docentes son muy metódicos y cerrados.</th>
+                        </tr>
+                        <tr>
+                            <td>3. La interacción en clase es clave para el aprendizaje.</th>
+                            <td>4. Los profesores jóvenes tienden a ser más innovadores.</th>
+                        </tr>
+                        </td>
+                            <td>5. Las clases se vuelven aburridas cuando solo es "hablar y hablar".</th>
+                            <td>6. La retroalimentación es importante para los estudiantes.</th>
+                        </tr>
+                        <tr>
+                            <td>7. No hay consistencia entre lo que se ve en clase y lo que está en la plataforma.</th>
+                            <td>8. Algunos profesores no concuerdan con el material de C Digital.</th>
+                        </tr>
+                        <tr>
+                            <td>9. La metodología de enseñanza varía mucho entre docentes.</th>
+                            <td>10. Se requiere un estándar mínimo de calidad pedagógica.</th>
+                        </tr>
+                    </tr>
+                </ul>
+                <div class="verbatim-container">
+                    <div class="verbatim">"Hay profesores que son muy metódicos, muy cerrados, esto es lo que toca y esto es lo que se hace." – Jennifer</div>
+                    <div class="verbatim">"Los profesores jóvenes hacen las clases superdinámicas." – Jennifer</div>
+                    <div class="verbatim">"Hay veces que lo que nos muestran en clase no concuerda con lo que está en la plataforma." – Jennifer</div>
+                </div>
+                <button class="btn-ticket" type="button" data-bs-toggle="collapse" data-bs-target="#tk_docencia">Tickets</button>
+                <div class="collapse" id="tk_docencia">
+                    <div class="ticket-collapse">
+                        <h6>Métrica - Docencia y Metodología</h6>
+                        <div style="width: 100%; max-width: 600px; margin: auto;">
+                            <canvas id="Grafica_Docencia_Metodologia"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prácticas Profesionales -->
+            <div class="item-container">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Subcategoría</th>
+                            <th>Polaridad</th>
+                            <th>Score / Eficacia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ACADÉMICO</th>
+                            <td>Prácticas Profesionales</th>
+                            <td><span class="badge-warn">Problemas de gestión</span></th>
+                            <td>5.0 / 10</th>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><strong>Análisis (CES):</strong> Alto. Jennifer ha tenido problemas con prácticas: le cambiaron el profesor tres veces, hubo reuniones sin conexión, y no ha podido cargar documentos por demoras de la empresa.</th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="item-header">Análisis Interpretativo (10 Puntos)</div>
+                <ul class="analysis-list">
+                    <table class="tabla-insights">
+                        <tr>
+                            <td>1. Le cambiaron el profesor de prácticas tres veces.</th>
+                            <td>2. Hubo una reunión donde nadie se conectó.</th>
+                        </tr>
+                        <tr>
+                            <td>3. La empresa donde trabaja no le ha entregado un documento necesario.</th>
+                            <td>4. Ha ido anexando documentos, pero está enredada.</th>
+                        </tr>
+                        <tr>
+                            <td>5. La universidad no ha sido clara en el acompañamiento.</th>
+                            <td>6. Se requiere un docente de prácticas más estable.</th>
+                        </td>
+                        <tr>
+                            <td>7. Los horarios de las charlas de prácticas son complicados.</th>
+                            <td>8. La comunicación con el área de prácticas es deficiente.</th>
+                        </tr>
+                        <tr>
+                            <td>9. Los estudiantes necesitan más guía en el proceso.</th>
+                            <td>10. La rotación de docentes afecta el seguimiento.</th>
+                        </tr>
+                    </tr>
+                </ul>
+                <div class="verbatim-container">
+                    <div class="verbatim">"Primero tenía un profesor, después otro, después otro, nos cambiaron como tres veces." – Jennifer</div>
+                    <div class="verbatim">"Hubo una reunión que estuvimos y nadie se conectó." – Jennifer</div>
+                    <div class="verbatim">"El documento no me lo entregan pues enseguida, demoran cierto tiempo." – Jennifer</div>
+                </div>
+                <button class="btn-ticket" type="button" data-bs-toggle="collapse" data-bs-target="#tk_practicas">Tickets</button>
+                <div class="collapse" id="tk_practicas">
+                    <div class="ticket-collapse">
+                        <h6>Métrica - Prácticas Profesionales</h6>
+                        <div style="width: 100%; max-width: 600px; margin: auto;">
+                            <canvas id="Grafica_Practicas_Profesionales"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN TECNOLÓGICO -->
+        <section id="tecnologico" class="tab-pane">
+            <h1 class="main-title">TECNOLÓGICO</h1>
+
+            <!-- Plataforma CDigital -->
+            <div class="item-container">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Subcategoría</th>
+                            <th>Polaridad</th>
+                            <th>Score / Eficacia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>TECNOLÓGICO</th>
+                            <td>Plataforma CDigital</th>
+                            <td><span class="badge-pos">Positiva (con observaciones)</span></th>
+                            <td>8.0 / 10</th>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><strong>Análisis (CES):</strong> Bajo. Jennifer usa CDigital como su principal herramienta. Sin embargo, hay inconsistencias entre lo que se ve en clase y lo que está en la plataforma.</th>
+                        </tr>
+                    </tbody>
+                </tr>
+                <div class="item-header">Análisis Interpretativo (10 Puntos)</div>
+                <ul class="analysis-list">
+                    <table class="tabla-insights">
+                        <tr>
+                            <td>1. CDigital es la plataforma que más usa Jennifer.</th>
+                            <td>2. Funciona bien en general.</th>
+                        </tr>
+                        <tr>
+                            <td>3. Hay inconsistencias entre la clase y el material de la plataforma.</th>
+                            <td>4. Los profesores añaden cosas adicionales en clase que no están en CDigital.</th>
+                        </tr>
+                        <tr>
+                            <td>5. Los estudiantes que solo ven la plataforma se pierden información.</th>
+                            <td>6. La plataforma de inglés (Dexway) es excelente.</th>
+                        </tr>
+                        <tr>
+                            <td>7. CDigital es "normal" comparada con Dexway.</th>
+                            <td>8. La organización por semanas es clara.</th>
+                        </tr>
+                        <tr>
+                            <td>9. Se podría mejorar la consistencia entre clase y plataforma.</th>
+                            <td>10. En general, es una herramienta funcional.</th>
+                        </tr>
+                    </tr>
+                </ul>
+                <div class="verbatim-container">
+                    <div class="verbatim">"C digital es el que más uso, me ha ido superbién." – Jennifer</div>
+                    <div class="verbatim">"Hay veces que lo que nos muestran en clase no concuerda con lo que está en la plataforma." – Jennifer</div>
+                    <div class="verbatim">"La plataforma de inglés es muy muy muy buena, ojalá todas fueran así." – Jennifer</div>
+                </div>
+                <button class="btn-ticket" type="button" data-bs-toggle="collapse" data-bs-target="#tk_cdigital">Tickets</button>
+                <div class="collapse" id="tk_cdigital">
+                    <div class="ticket-collapse">
+                        <h6>Métrica - Plataforma CDigital</h6>
+                        <div style="width: 100%; max-width: 600px; margin: auto;">
+                            <canvas id="Grafica_Tecnologico_Tickets"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Horarios y Clases Cruzadas -->
+            <div class="item-container">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Subcategoría</th>
+                            <th>Polaridad</th>
+                            <th>Score / Eficacia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>TECNOLÓGICO</th>
+                            <td>Horarios y Clases Cruzadas</th>
+                            <td><span class="badge-critico">Crítica</span></th>
+                            <td>3.0 / 10</th>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><strong>Análisis (CES):</strong> Alto. Jennifer reporta que todas las clases se le cruzaron en tercer semestre (todas a la misma hora). No tuvo opciones de horario alternativo, afectando su disponibilidad.</th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="item-header">Análisis Interpretativo (10 Puntos)</div>
+                <ul class="analysis-list">
+                    <table class="tabla-insights">
+                        </td>
+                            <td>1. En tercer semestre, todas las clases se cruzaron.</th>
+                            <td>2. Todas iniciaban a las 6:15-7:45, mismas horas.</th>
+                        </tr>
+                        <tr>
+                            <td>3. No había opciones de horario alternativo.</th>
+                            <td>4. Jennifer trabaja hasta las 9 pm, complicando aún más.</th>
+                        </tr>
+                        <tr>
+                            <td>5. Tuvo que ver grabaciones en lugar de clases en vivo.</th>
+                            <td>6. El semestre pasado tenía clases a las 8 pm que le servían.</th>
+                        </tr>
+                        <tr>
+                            <td>7. El cambio se debe a restricciones de horas extras de profesores.</th>
+                            <td>8. No es lo mismo ver grabaciones que clases en vivo.</th>
+                        </tr>
+                        <tr>
+                            <td>9. Jennifer sugiere no cruzar clases en próximos semestres.</th>
+                            <td>10. Se necesita una mejor planificación de horarios.</th>
+                        </tr>
+                    </tr>
+                </ul>
+                <div class="verbatim-container">
+                    <div class="verbatim">"En este semestre todas las clases se me cruzaron, todas iniciaban de 6:15 a 8." – Jennifer</div>
+                    <div class="verbatim">"Si veía estadística, no podía ver creación de empresa." – Jennifer</div>
+                    <div class="verbatim">"Me tocaba estar mirando la grabación y pues no es lo mismo." – Jennifer</div>
+                </div>
+                <button class="btn-ticket" type="button" data-bs-toggle="collapse" data-bs-target="#tk_horarios">Tickets</button>
+                <div class="collapse" id="tk_horarios">
+                    <div class="ticket-collapse">
+                        <h6>Métrica - Horarios y Clases Cruzadas</h6>
+                        <div style="width: 100%; max-width: 600px; margin: auto;">
+                            <canvas id="Grafica_Herramientas_Aula"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Infraestructura de Laboratorio -->
+            <div class="item-container">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Subcategoría</th>
+                            <th>Polaridad</th>
+                            <th>Score / Eficacia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>TECNOLÓGICO</th>
+                            <td>Infraestructura de Laboratorio</th>
+                            <td><span class="badge-neutral">Sin datos</span></th>
+                            <td><span class="text-muted">No reportado</span></th>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><strong>Análisis (CES):</strong> No se reportaron observaciones sobre laboratorios (modalidad virtual).</th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="item-header">Análisis Interpretativo (10 Puntos)</div>
+                <ul class="analysis-list">
+                    <table class="tabla-insights">
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        </tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                    </tr>
+                </ul>
+                <div class="verbatim-container">
+                    <div class="verbatim">--</div>
+                    <div class="verbatim">--</div>
+                    <div class="verbatim">--</div>
+                </div>
+                <button class="btn-ticket" type="button" data-bs-toggle="collapse" data-bs-target="#tk_lab">Tickets</button>
+                <div class="collapse" id="tk_lab">
+                    <div class="ticket-collapse">
+                        <h6>Métrica - Infraestructura de Laboratorio</h6>
+                        <div style="width: 100%; max-width: 600px; margin: auto;">
+                            <canvas id="Grafica_Laboratorio"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN SERVICIO AL CLIENTE -->
+        <section id="servicio" class="tab-pane">
+            <h1 class="main-title">SERVICIO AL CLIENTE</h1>
+
+            <!-- CamiTicket -->
+            <div class="item-container">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Subcategoría</th>
+                            <th>Polaridad</th>
+                            <th>Score / Eficacia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>SERVICIO AL CLIENTE</th>
+                            <td>CamiTicket y Respuesta</th>
+                            <td><span class="badge-warn">Problema pendiente</span></th>
+                            <td>6.0 / 10</th>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><strong>Análisis (CES):</strong> Medio. Jennifer tiene un problema con una promoción de "pague uno, lleve dos" donde ahora le están cobrando un adicional. Aún no ha puesto el CamiTicket. Lili reporta que sí ha tenido respuesta.</th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="item-header">Análisis Interpretativo (10 Puntos)</div>
+                <ul class="analysis-list">
+                    <table class="tabla-insights">
+                        <tr>
+                            <td>1. Jennifer tiene un problema con una promoción no cumplida.</th>
+                            <td>2. Le dijeron que pagando un semestre el otro era gratis, pero ahora le cobran adicional.</th>
+                        </tr>
+                        <tr>
+                            <td>3. Aún no ha puesto el CamiTicket.</th>
+                            <td>4. En 360 solo le aparece una deuda de un seguro.</th>
+                        </tr>
+                        <tr>
+                            <td>5. Lili reporta que ha puesto CamiTicket y ha tenido respuesta.</th>
+                            <td>6. A Lili le han dado solución a sus tickets.</th>
+                        </tr>
+                        <tr>
+                            <td>7. La comunicación sobre promociones no es clara.</th>
+                            <td>8. Se requiere mayor claridad en la información financiera.</th>
+                        </tr>
+                        <tr>
+                            <td>9. Los estudiantes deben poner CamiTicket oportunamente.</th>
+                            <td>10. El servicio al cliente tiene oportunidades de mejora.</th>
+                        </td>
+                    </tr>
+                </ul>
+                <div class="verbatim-container">
+                    <div class="verbatim">"Había una promoción que pagaba un semestre y el otro me salía gratis, ahora me dicen que tengo una deuda." – Jennifer</div>
+                    <div class="verbatim">"Ese adicional no me lo dijeron cuando me informaron que tenía derecho." – Jennifer</div>
+                    <div class="verbatim">"Cami tickets he puesto y he tenido respuesta, me han dado solución." – Lili</div>
+                </div>
+                <button class="btn-ticket" type="button" data-bs-toggle="collapse" data-bs-target="#tk_camiticket">Tickets</button>
+                <div class="collapse" id="tk_camiticket">
+                    <div class="ticket-collapse">
+                        <h6>Métrica - CamiTicket</h6>
+                        <div style="width: 100%; max-width: 600px; margin: auto;">
+                            <canvas id="Grafica_CamiTicket"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bienestar Institucional -->
+            <div class="item-container">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Subcategoría</th>
+                            <th>Polaridad</th>
+                            <th>Score / Eficacia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>SERVICIO AL CLIENTE</th>
+                            <td>Bienestar Institucional</th>
+                            <td><span class="badge-neutral">Sin datos</span></th>
+                            <td><span class="text-muted">No reportado</span></th>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><strong>Análisis (CES):</strong> No se reportaron observaciones específicas sobre Bienestar en esta sesión, aunque han participado en foros y capacitaciones.</th>
+                        </table>
+                    </tbody>
+                </table>
+                <div class="item-header">Análisis Interpretativo (10 Puntos)</div>
+                <ul class="analysis-list">
+                    <table class="tabla-insights">
+                        <tr>
+                            <td>Han participado en foros y capacitaciones (actividades de bienestar).</th>
+                            <td>No han tenido mayor interacción con Bienestar.</th>
+                        </tr>
+                        <tr>
+                            <td>Esta es la primera actividad de bienestar en la que participan directamente.</th>
+                            <td>Las actividades de bienestar no son muy conocidas.</th>
+                        </tr>
+                        </td>
+                            <td>Se requiere mayor difusión de actividades de bienestar.</th>
+                            <td>No se reportaron quejas específicas.</th>
+                        </tr>
+                        <tr>
+                            <td>Las capacitaciones virtuales son valoradas.</th>
+                            <td>No hay información sobre beneficios de bienestar.</th>
+                        </tr>
+                        <tr>
+                            <td>Se podría mejorar la comunicación de actividades.</th>
+                            <td>Los estudiantes están abiertos a participar más.</th>
+                        </tr>
+                    </tr>
+                </ul>
+                <div class="verbatim-container">
+                    <div class="verbatim">"A foros sí nos han invitado." – Lili</div>
+                    <div class="verbatim">"Esta es la primera actividad de bienestar en la que participo." – Jennifer</div>
+                    <div class="verbatim">--</div>
+                </div>
+                <button class="btn-ticket" type="button" data-bs-toggle="collapse" data-bs-target="#tk_bienestar">Tickets</button>
+                <div class="collapse" id="tk_bienestar">
+                    <div class="ticket-collapse">
+                        <h6>Métrica - Bienestar Institucional</h6>
+                        <div style="width: 100%; max-width: 600px; margin: auto;">
+                            <canvas id="Grafica_Bienestar_Institucional"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INFRAESTRUCTURA (Comodidad y Servicios Físicos) -->
+            <div class="item-container">
+                <h1 class="main-title" style="font-size: 1.8rem; margin-top: 2rem;">INFRAESTRUCTURA</h1>
+                <div class="sub-title">Comodidad y Servicios Físicos</div>
+                <table class="table table-bordered" style="margin-top: 1rem;">
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Subcategoría</th>
+                            <th>Polaridad</th>
+                            <th>Score / Eficacia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="odd">
+                            <td>INFRAESTRUCTURA</th>
+                            <td>Comodidad y Servicios Físicos</th>
+                            <td><span class="badge-neutral">Sin datos</span></th>
+                            <td><span class="text-muted">No reportado</span></th>
+                        </tr>
+                        <tr class="even">
+                            <td colspan="4"><strong>Análisis (CES):</strong> No se reportaron observaciones sobre infraestructura física. Jennifer conoce la sede de Montería.</th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="item-header">Análisis Interpretativo (10 Puntos)</div>
+                <ul class="analysis-list">
+                    <table class="tabla-insights">
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                        <tr>
+                            <td>No se proporcionó información en esta sesión.</th>
+                            <td>No se proporcionó información en esta sesión.</th>
+                        </tr>
+                    </tr>
+                </ul>
+                <div class="verbatim-container">
+                    <div class="verbatim">--</div>
+                    <div class="verbatim">--</div>
+                    <div class="verbatim">--</div>
+                </div>
+                <button class="btn-ticket" type="button" data-bs-toggle="collapse" data-bs-target="#tk_infra">Tickets</button>
+                <div class="collapse" id="tk_infra">
+                    <div class="ticket-collapse">
+                        <h6>Métrica - Comodidad y Servicios</h6>
+                        <div style="width: 100%; max-width: 600px; margin: auto;">
+                            <canvas id="Grafica_Comodidad_Servicios"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN BIENESTAR -->
+        <section id="bienestar" class="tab-pane">
+            <h1 class="main-title">BIENESTAR</h1>
+            <div class="sub-title">Beneficios y Becas</div>
+
+            <div class="item-container">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Subcategoría</th>
+                            <th>Polaridad</th>
+                            <th>Score / Eficacia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>BIENESTAR</th>
+                            <td>Beneficios y Becas</th>
+                            <td><span class="badge-pos">Positiva</span></th>
+                            <td>9.0 / 10</th>
+                        </td>
+                        <tr>
+                            <td colspan="4"><strong>Análisis (CES):</strong> Bajo. La promoción "pague uno, lleve dos" fue un factor clave para que Jennifer eligiera la CUN. Los precios accesibles son el principal beneficio.</th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="item-header">Análisis Interpretativo (10 Puntos)</div>
+                <ul class="analysis-list">
+                    <table class="tabla-insights">
+                        <tr>
+                            <td>1. La promoción "pague uno, lleve dos" fue determinante.</th>
+                            <td>2. Los precios de la CUN son más accesibles que otras universidades.</th>
+                        </tr>
+                        <tr>
+                            <td>3. Jennifer buscó en muchas universidades y ninguna le ofrecía lo mismo.</th>
+                            <td>4. La oportunidad de pagos por ciclo es valorada.</th>
+                        </tr>
+                        <td>
+                            <td>5. Los descuentos y promociones atraen a estudiantes mayores.</th>
+                            <td>6. El precio es un factor clave de permanencia.</th>
+                        </tr>
+                        <tr>
+                            <td>7. Jennifer es muy agradecida con la CUN por la oportunidad.</th>
+                            <td>8. La relación calidad-precio es buena.</th>
+                        </tr>
+                        <tr>
+                            <td>9. Las facilidades de pago son un diferenciador.</th>
+                            <td>10. A pesar del problema con la promoción, sigue siendo favorable.</th>
+                        </td>
+                    </table>
+                </ul>
+                <div class="verbatim-container">
+                    <div class="verbatim">"La promoción era que pagaba un semestre y el otro me salía gratis." – Jennifer</div>
+                    <div class="verbatim">"Ninguna me ofrecía la oportunidad de que puedes hacer esto, te damos descuento, pagos por ciclo." – Jennifer</div>
+                    <div class="verbatim">"Muy agradecida, es una bendición muy grande con CUN." – Jennifer</div>
+                </div>
+                <button class="btn-ticket" type="button" data-bs-toggle="collapse" data-bs-target="#tk_becas">Tickets</button>
+                <div class="collapse" id="tk_becas">
+                    <div class="ticket-collapse">
+                        <h6>Métrica - Beneficios y Becas</h6>
+                        <div style="width: 100%; max-width: 600px; margin: auto;">
+                            <canvas id="Grafica_Beneficios_Becas"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN PERTENENCIA -->
+        <section id="pertenencia" class="tab-pane">
+            <h1 class="main-title">SENTIDO DE PERTENENCIA</h1>
+            <div class="sub-title">Identidad Cunista</div>
+
+            <div class="item-container">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Subcategoría</th>
+                            <th>Polaridad</th>
+                            <th>Score / Eficacia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>PERTENENCIA</th>
+                            <td>Orgullo y Recomendación</th>
+                            <td><span class="badge-pos">Positiva</span></th>
+                            <td>9.0 / 10</th>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><strong>Análisis (CES):</strong> Bajo. La CUN representa una oportunidad grande para Jennifer, que a sus 42 años pudo retomar sus estudios gracias a los precios accesibles y la virtualidad.</th>
+                        </tr>
+                    </tbody>
+                </tr>
+                <div class="item-header">Análisis Interpretativo (10 Puntos)</div>
+                <ul class="analysis-list">
+                    <table class="tabla-insights">
+                        <tr>
+                            <td>1. La CUN es una oportunidad grande para Jennifer.</th>
+                            <td>2. A sus 42 años, es una oportunidad de crecimiento.</th>
+                        </tr>
+                        <tr>
+                            <td>3. La universidad le permitió escalar en su trabajo (llegó a ser jefe).</th>
+                            <td>4. La flexibilidad virtual le permite trabajar y estudiar.</th>
+                        </tr>
+                        <tr>
+                            <td>5. Lili define la CUN como oportunidad, progreso, aprendizaje.</th>
+                            <td>6. Es una parte fundamental para el desarrollo personal.</th>
+                        </tr>
+                        <tr>
+                            <td>7. Los precios accesibles fueron clave para decidirse.</th>
+                            <td>8. A pesar de los problemas, la experiencia general es positiva.</th>
+                        </tr>
+                        <tr>
+                            <td>9. Recomendaría la CUN por la oportunidad que brinda.</th>
+                            <td>10. El sentido de pertenencia está ligado a la gratitud.</th>
+                        </tr>
+                    </tr>
+                </ul>
+                <div class="verbatim-container">
+                    <div class="verbatim">"Para mí es una oportunidad grande, con 40 años ponerme a estudiar." – Jennifer</div>
+                    <div class="verbatim">"Muy agradecida, es una bendición muy grande con CUN." – Jennifer</div>
+                    <div class="verbatim">"Oportunidad, progreso, aprendizaje, adaptación a nuevas cosas." – Lili</div>
+                </div>
+                <button class="btn-ticket" type="button" data-bs-toggle="collapse" data-bs-target="#tk_orgullo">Tickets</button>
+                <div class="collapse" id="tk_orgullo">
+                    <div class="ticket-collapse">
+                        <h6>Métrica - Orgullo y Recomendación</h6>
+                        <div style="width: 100%; max-width: 600px; margin: auto;">
+                            <canvas id="Grafica_Orgullo_Recomendacion"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../../js/graficas.js"></script>
+    <script src="../../js/funciones.js"></script>
+</body>
+</html>
