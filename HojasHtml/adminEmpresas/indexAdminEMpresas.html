@@ -17,7 +17,7 @@
         <div class="brand">CUN ANALYTICS</div>
         <nav class="nav-menu">
             <ul class="nav-list">
-                <li><button class="nav-btn active" data-tab="inicio">Resumen Ejecutivo</button></li>
+                <li><button class="nav-btn" data-tab="inicio">Resumen Ejecutivo</button></li>
                 <div class="nav-label">CIUDADES</div>
                 <li><a href="./ibague.html" class="nav-btn">Ibagué</a></li>
                 <li><a href="./cali.html" class="nav-btn">Cali</a></li>
@@ -68,246 +68,407 @@
             </div>
         </section>
 
-        <!-- TOGGLE / ACCORDION PARA TABLA DE PARTICIPANTES -->
-        <div class="accordion-container" style="margin-top: 30px; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; background: white;">
-            <button class="accordion-header" onclick="toggleAccordion()" style="width: 100%; padding: 20px; background: #f8f9fa; border: none; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
-                <span style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: #333;">👥 BASE DE DATOS DE PARTICIPANTES (GRUPOS FOCALES)</span>
-                <span id="acc-icon" style="color: #e10915; font-size: 1.5rem; font-weight: bold;">+</span>
-            </button>
-            <div id="accordion-content" class="accordion-content" style="display: none; padding: 20px; overflow-x: auto; border-top: 1px solid #e0e0e0;">
-                <table class="comparative-table">
-                    <thead>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Documento</th>
-                            <th>Nombre Completo</th>
-                            <th>Programa Académico</th>
-                            <th>Modalidad</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>12/02/2026</td><td>1028863261</td><td>Jaider Santiago Beltrán Veloza</td><td>Ingeniería de Sistemas</td><td>Presencial</td></tr>
-                        <tr><td>12/02/2026</td><td>1011086220</td><td>David Alejandro Hernández Rodríguez</td><td>Ingeniería de Sistemas</td><td>Presencial</td></tr>
-                        <tr><td>12/02/2026</td><td>1031171124</td><td>Juan Esteban Bernal</td><td>Administración de Empresas</td><td>Presencial</td></tr>
-                        <tr><td>12/02/2026</td><td>1010156798</td><td>Cristian Alexis Trujillo Padilla</td><td>Producción Audiovisual</td><td>Presencial</td></tr>
-                        <tr><td>12/02/2026</td><td>1233501755</td><td>Tifany Cifuentes Cabrales</td><td>Diseño Gráfico</td><td>Presencial</td></tr>
-                        <tr><td>12/02/2026</td><td>1016716433</td><td>Deiby Sebastián Gil Gallo</td><td>Diseño Gráfico</td><td>Presencial</td></tr>
-                        <tr><td>12/02/2026</td><td>1013108384</td><td>Juan Esteban Marentes Caballero</td><td>Ingeniería Electrónica</td><td>Presencial</td></tr>
-                        <tr><td>12/02/2026</td><td>1027151205</td><td>Laura Ximena Penagos Fernández</td><td>Diseño Gráfico</td><td>Presencial</td></tr>
-                        <tr><td>12/02/2026</td><td>1025530709</td><td>Juan Sebastián Amado Rodríguez</td><td>Ingeniería Electrónica</td><td>Presencial</td></tr>
-                        <tr><td>12/02/2026</td><td>1000850787</td><td>Juan David Velandia Guayacundo</td><td>Ingeniería de Sistemas</td><td>Presencial</td></tr>
-                        <tr><td>12/02/2026</td><td>1072961025</td><td>Andrés Felipe Castro Rodriguez</td><td>Administración Deportiva</td><td>Presencial</td></tr>
-                        <tr><td>12/02/2026</td><td>1024504661</td><td>Daniel Esteban Murcia Velásquez</td><td>Ingeniería de Sistemas</td><td>Presencial</td></tr>
-                        <tr><td>13/02/2026</td><td>1011089116</td><td>Johan Jaramillo Mejía</td><td>Ingeniería de Sistemas</td><td>Presencial</td></tr>
-                        <tr><td>11/03/2026</td><td>1101685660</td><td>Emerson Sair Salazar Corzo</td><td>Diseño Gráfico</td><td>Virtual</td></tr>
-                        <tr><td>11/03/2026</td><td>1082979523</td><td>Breiner Zamir Hernandez Ñustes</td><td>Administración de Empresas</td><td>Virtual</td></tr>
-                        <tr><td>12/03/2026</td><td>1030664643</td><td>Elkin Gómez</td><td>Publicidad y Mercadeo</td><td>Virtual</td></tr>
-                        <tr><td>12/03/2026</td><td>10967574</td><td>Alber Manuel Martinez Palencia</td><td>Administración de Empresas</td><td>Virtual</td></tr>
-                        <tr><td>12/03/2026</td><td>1021315566</td><td>Juan Esteban Contreras Lozano</td><td>Producción Audiovisual</td><td>Virtual</td></tr>
-                        <tr><td>12/03/2026</td><td>1003721769</td><td>Jose Mario Llorente Machado</td><td>Administración de Empresas</td><td>Virtual</td></tr>
-                        <tr><td>12/03/2026</td><td>1042433398</td><td>Hugo Rafael Mercado Bonett</td><td>Ingeniería Industrial</td><td>Virtual</td></tr>
-                        <tr><td>12/03/2026</td><td>1072425446</td><td>Carlos Andres Penagos Cristobal</td><td>Contaduría Pública</td><td>Virtual</td></tr>
-                        <tr><td>12/03/2026</td><td>1082958380</td><td>Dayana Melisa Perez Carrillo</td><td>Administración de Empresas</td><td>Virtual</td></tr>
-                        <tr><td>12/03/2026</td><td>1001186234</td><td>Carlos Alberto Poveda Nuñez</td><td>Ingeniería de Sistemas</td><td>Presencial</td></tr>
-                        <tr><td>12/03/2026</td><td>1070008398</td><td>Johanna Patricia Ramos Orjuela</td><td>Contaduría Pública</td><td>Virtual</td></tr>
-                    </tbody>
-                </table>
+        <!-- SECCIÓN DE PESTAÑAS PARA CATEGORÍAS -->
+        <div style="margin-top: 40px;">
+            <div style="display: flex; gap: 5px; border-bottom: 2px solid #ddd; margin-bottom: 20px; flex-wrap: wrap;">
+                <button class="category-tab active" data-category="academico" style="padding: 12px 24px; background: none; border: none; cursor: pointer; font-weight: 600; color: #333; border-bottom: 3px solid #e10915; font-family: 'Montserrat', sans-serif;">🎓 ACADÉMICO</button>
+                <button class="category-tab" data-category="servicio" style="padding: 12px 24px; background: none; border: none; cursor: pointer; font-weight: 600; color: #666; font-family: 'Montserrat', sans-serif;">📞 SERVICIO AL CLIENTE</button>
+                <button class="category-tab" data-category="tecnologia" style="padding: 12px 24px; background: none; border: none; cursor: pointer; font-weight: 600; color: #666; font-family: 'Montserrat', sans-serif;">💻 TECNOLÓGICO</button>
+                <button class="category-tab" data-category="infraestructura" style="padding: 12px 24px; background: none; border: none; cursor: pointer; font-weight: 600; color: #666; font-family: 'Montserrat', sans-serif;">🏢 INFRAESTRUCTURA</button>
+                <button class="category-tab" data-category="bienestar" style="padding: 12px 24px; background: none; border: none; cursor: pointer; font-weight: 600; color: #666; font-family: 'Montserrat', sans-serif;">❤️ BIENESTAR</button>
+                <button class="category-tab" data-category="pertenencia" style="padding: 12px 24px; background: none; border: none; cursor: pointer; font-weight: 600; color: #666; font-family: 'Montserrat', sans-serif;">🏆 PERTENENCIA</button>
+            </div>
+
+            <!-- ==================== CATEGORÍA ACADÉMICO ==================== -->
+            <div id="categoria-academico" class="category-pane active">
+                <div class="table-wrapper">
+                    <table class="regional-analysis-table">
+                        <thead>
+                            <tr>
+                                <th width="18%">Subcategoría</th>
+                                <th width="7%">Sincelejo<br><span style="font-size:10px;">(5H/2M)</span></th>
+                                <th width="7%">Montería<br><span style="font-size:10px;">(0H/1M)</span></th>
+                                <th width="7%">Santa Marta<br><span style="font-size:10px;">(3H/4M)</span></th>
+                                <th width="7%">Neiva<br><span style="font-size:10px;">(0H/0M)</span></th>
+                                <th width="7%">Ibagué<br><span style="font-size:10px;">(1H/1M)</span></th>
+                                <th width="7%">Cali<br><span style="font-size:10px;">(1H/0M)</span></th>
+                                <th width="7%">Bogotá P<br><span style="font-size:10px;">(0H/1M)</span></th>
+                                <th width="7%">Bogotá V<br><span style="font-size:10px;">(3H/3M)</span></th>
+                                <th width="7%">Pereira<br><span style="font-size:10px;">(1H/0M)</span></th>
+                                <th width="7%">Villavicencio<br><span style="font-size:10px;">(1H/1M)</span></th>
+                                <th width="7%">Bucaramanga<br><span style="font-size:10px;">(0H/1M)</span></th>
+                                <th width="7%">Yopal<br><span style="font-size:10px;">(0H/1M)</span></th>
+                                <th width="7%">Medellín<br><span style="font-size:10px;">(1H/2M)</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="category-cell"><strong>Calidad del Pensum</strong></td>
+                                <td>🔴 <span style="color:#ef4444; font-weight:600;">Crítico</span><br>Pensum desactualizado con IA incluida pero poco aplicada; 9.5/10 en percepción pero la práctica no acompaña.</td>
+                                <td>🟡 <span style="color:#f59e0b; font-weight:600;">Mixto</span><br>Contenido teórico sólido pero sin equipos para prácticas. Los estudiantes valoran la teoría pero piden más aplicación.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Bueno</span><br>Malla curricular completa y aplicable al mundo laboral. Los estudiantes sienten que aprenden herramientas útiles.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Bueno</span><br>Contenidos modernos con inclusión de temas de IA, pero hay demanda insatisfecha por ciberseguridad.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Bueno</span><br>Contenidos útiles y bien estructurados. Los estudiantes destacan la integración de materiales digitales.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Bueno</span><br>Contenidos aplicables al trabajo. Norbert valora las herramientas administrativas para su labor.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Bueno</span><br>Contenidos prácticos y con ejemplos reales. Grupos pequeños facilitan el aprendizaje.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Bueno</span><br>Contenidos alineados con el mercado laboral. Los estudiantes valoran los ejemplos prácticos en clase.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Bueno</span><br>Contenido ajustado a la realidad laboral. David aplica lo aprendido en su trabajo diario.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Excelente</span><br>La enseñanza de IA es un valor agregado. Jorge aprendió herramientas como Google Notebook LM.</td>
+                                <td>🟡 <span style="color:#f59e0b; font-weight:600;">Mixto</span><br>Bueno en general pero algunos docentes tienen debilidades en IA y Excel, resolviendo de manera poco práctica.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Bueno</span><br>Contenidos completos y bien organizados. Lili valora la estructura del material en plataforma.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Excelente</span><br>Los contenidos son altamente aplicables al trabajo. Jennifer fue ascendida aplicando lo aprendido.</td>
+                            </tr>
+                            <tr>
+                                <td class="category-cell"><strong>Docencia y Metodología</strong></td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Excelente</span><br>Profesores expertos y cercanos. La relación docente-estudiante es el pilar de la sede.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Bueno</span><br>Docentes flexibles y comprensivos. Los profesores entienden las situaciones de los estudiantes que trabajan.</td>
+                                <td>🟡 <span style="color:#f59e0b; font-weight:600;">Mixto</span><br>Algunos docentes son excelentes y cercanos, otros son muy metódicos y no permiten participación.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Bueno</span><br>Docentes con buen dominio técnico pero falta estandarización en la forma de enseñar herramientas digitales.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Excelente</span><br>Docentes flexibles, explican las veces que sea necesario y mantienen buena relación con estudiantes.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Bueno</span><br>Sin problemas con docentes. Norbert se adapta a los diferentes estilos de enseñanza.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Bueno</span><br>Docentes cercanos y pacientes. La estudiante destaca la buena comunicación en el aula.</td>
+                                <td>🔴 <span style="color:#ef4444; font-weight:600;">Crítico</span><br>Caso grave del profesor Nicolás que humilló a una estudiante y no resolvió dudas adecuadamente.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Bueno</span><br>Docentes buenos en general, aunque la masificación afecta la calidad en algunas materias.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Bueno</span><br>Docentes responden correos y orientan bien. Sin embargo, los ACA en grupo son problemáticos por la distancia.</td>
+                                <td>🟡 <span style="color:#f59e0b; font-weight:600;">Mixto</span><br>Conflicto grave con una docente que puso autoevaluación de 33 y coevaluación de 01, poniendo en riesgo la materia.</td>
+                                <td>🟡 <span style="color:#f59e0b; font-weight:600;">Mixto</span><br>Algunos docentes son interactivos y dinámicos, otros se dedican solo a hablar y la clase se vuelve aburrida.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Excelente</span><br>Docentes atentos, diligentes y dinámicos. Destacan a la profesora Sully Monroy por su metodología.</td>
+                            </tr>
+                            <tr>
+                                <td class="category-cell"><strong>Prácticas Profesionales</strong></td>
+                                <td>🔴 <span style="color:#ef4444; font-weight:600;">Crítico</span><br>Falta total de convenios locales. Estudiantes de 8vo semestre estancados sin poder graduarse.</td>
+                                <td>🔴 <span style="color:#ef4444; font-weight:600;">Crítico</span><br>Grave crisis por falta de convenios. Empresas no firman contratos por demoras administrativas de Bogotá.</td>
+                                <td>🔴 <span style="color:#ef4444; font-weight:600;">Crítico</span><br>Falta de docente guía durante meses. Los estudiantes no saben cómo subir documentos ni los plazos.</td>
+                                <td>🔴 <span style="color:#ef4444; font-weight:600;">Crítico</span><br>Desconocimiento total del proceso. Los estudiantes no saben a quién acudir ni cómo legalizar contratos.</td>
+                                <td>🔴 <span style="color:#ef4444; font-weight:600;">Crítico</span><br>Incertidumbre total. Los estudiantes temen no graduarse por falta de empresas vinculadas.</td>
+                                <td>🔴 <span style="color:#ef4444; font-weight:600;">Crítico</span><br>Norbert no puede validar su experiencia por no tener contrato formal (es representante legal sin vinculación).</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Sin datos</span><br>No se reportaron observaciones sobre prácticas en esta sesión.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Sin datos</span><br>Estudiantes de primeros semestres, no reportaron información sobre prácticas.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Sin datos</span><br>Estudiante de segundo semestre, no reportó información sobre prácticas.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Sin datos</span><br>Estudiantes de segundo semestre, no reportaron información sobre prácticas.</td>
+                                <td>🔴 <span style="color:#ef4444; font-weight:600;">Crítico</span><br>Rotación de docentes, documentos sin revisar por semanas y reuniones en horarios laborales.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Sin datos</span><br>Estudiante de segundo semestre, no reportó información sobre prácticas.</td>
+                                <td>🟡 <span style="color:#f59e0b; font-weight:600;">Mixto</span><br>Angelina consiguió prácticas por su cuenta (autogestión). Jennifer reporta rotación de 3 docentes.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ==================== CATEGORÍA SERVICIO AL CLIENTE ==================== -->
+            <div id="categoria-servicio" class="category-pane" style="display: none;">
+                <div class="table-wrapper">
+                    <table class="regional-analysis-table">
+                        <thead>
+                            <tr>
+                                <th width="18%">Subcategoría</th>
+                                <th width="7%">Sincelejo</th>
+                                <th width="7%">Montería</th>
+                                <th width="7%">Santa Marta</th>
+                                <th width="7%">Neiva</th>
+                                <th width="7%">Ibagué</th>
+                                <th width="7%">Cali</th>
+                                <th width="7%">Bogotá P</th>
+                                <th width="7%">Bogotá V</th>
+                                <th width="7%">Pereira</th>
+                                <th width="7%">Villavicencio</th>
+                                <th width="7%">Bucaramanga</th>
+                                <th width="7%">Yopal</th>
+                                <th width="7%">Medellín</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="category-cell"><strong>CamiTicket y Respuesta</strong></td>
+                                <td>🔴 <span style="color:#ef4444; font-weight:600;">Crítico</span><br>El sistema más odiado. Respuestas automáticas, frías y sin solución. La sede no tiene autonomía.</td>
+                                <td>🔴 <span style="color:#ef4444; font-weight:600;">Crítico</span><br>Tickets archivados sin respuesta. Percepción de abandono total por parte de la administración.</td>
+                                <td>🔴 <span style="color:#ef4444; font-weight:600;">Crítico</span><br>No responden lo que se pregunta, parecen chatbot. Los teléfonos no atienden, WhatsApp rebota.</td>
+                                <td>🔴 <span style="color:#ef4444; font-weight:600;">Crítico</span><br>Respuestas robóticas genéricas que no corresponden a la solicitud. Demoras extremas.</td>
+                                <td>🟡 <span style="color:#f59e0b; font-weight:600;">Mixto</span><br>Ana María tuvo respuesta el mismo día. Fabio tuvo demoras y confusión con materias duplicadas.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Positivo</span><br>Norbert ha tenido respuestas y soluciones. El cambio de programa fue rápido y sin problemas.</td>
+                                <td>🔴 <span style="color:#ef4444; font-weight:600;">Crítico</span><br>Coordinadora de Bosa poco empática, no se presenta, no ayuda. Prefiere usar CamiTicket.</td>
+                                <td>🔴 <span style="color:#ef4444; font-weight:600;">Crítico</span><br>Diego perdió un semestre completo porque un pago no se reflejó y nadie respondió.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Sin datos</span><br>No se reportaron experiencias con CamiTicket en esta sesión.</td>
+                                <td>🔴 <span style="color:#ef4444; font-weight:600;">Crítico</span><br>Jamie casi deserta. Respuestas de chatbot, teléfonos no atienden, solo el asesor Mauricio ayudó.</td>
+                                <td>🟡 <span style="color:#f59e0b; font-weight:600;">Mixto</span><br>Inconsistencias en pagos. A veces solucionan, otras veces se demoran y no leen bien los tickets.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Positivo</span><br>Lili ha tenido respuesta y solución a sus tickets. La experiencia ha sido positiva.</td>
+                                <td>🔴 <span style="color:#ef4444; font-weight:600;">Crítico</span><br>Angelina lleva 1.5 meses esperando un certificado de estudio sin respuesta.</td>
+                            </tr>
+                            <tr>
+                                <td class="category-cell"><strong>Bienestar Institucional</strong></td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Excelente</span><br>El departamento estrella. Trato humano, cercano y resolutivo. Es el rostro de la sede.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Bueno</span><br>Valoran los uniformes y kits deportivos. Es el canal humano que mitiga fallas administrativas.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Excelente</span><br>Karen es el salvavidas de la sede. Escucha, orienta y resuelve lo que CamiTicket no hace.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Excelente</span><br>Único canal que genera felicidad real. Mediadores efectivos cuando los procesos fallan.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Bueno</span><br>C Te Ayuda muy valorado. Sin embargo, no hay datos específicos sobre Bienestar.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Sin datos</span><br>No se reportaron observaciones sobre Bienestar en esta sesión.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Sin datos</span><br>No se reportaron experiencias directas con Bienestar.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Sin datos</span><br>No se reportaron observaciones sobre Bienestar en esta sesión.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Sin datos</span><br>No se reportaron observaciones sobre Bienestar en esta sesión.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Sin datos</span><br>No se reportaron observaciones sobre Bienestar en esta sesión.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Sin datos</span><br>No se reportaron observaciones sobre Bienestar en esta sesión.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Sin datos</span><br>No se reportaron observaciones sobre Bienestar en esta sesión.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Sin datos</span><br>No se reportaron observaciones sobre Bienestar en esta sesión.</td>
+                            </tr>
+                            <tr>
+                                <td class="category-cell"><strong>Infraestructura Física</strong></td>
+                                <td>🔴 <span style="color:#ef4444; font-weight:600;">Crítico</span><br>Calor extremo. Salones pequeños, falta de zonas de descanso y cafetería.</td>
+                                <td>🟡 <span style="color:#f59e0b; font-weight:600;">Mixto</span><br>Ambiente agradable pero afectado por mala difusión de eventos. Calor en salones.</td>
+                                <td>🔴 <span style="color:#ef4444; font-weight:600;">Crítico</span><br>Calor insoportable. Aires acondicionados dañados, baños sucios, falta de bebederos.</td>
+                                <td>🟡 <span style="color:#f59e0b; font-weight:600;">Mixto</span><br>Sede tipo oficina, falta alma de campus. Sin bebederos de agua fría.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Virtual</span><br>Modalidad virtual, no aplica infraestructura física.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Virtual</span><br>Modalidad virtual, no aplica infraestructura física.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Bueno</span><br>Aulas limpias y agradables. La sede de Bosa está en buen estado.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Virtual</span><br>Modalidad virtual, no aplica infraestructura física.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Virtual</span><br>Modalidad virtual, no aplica infraestructura física.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Virtual</span><br>Modalidad virtual, no aplica infraestructura física.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Virtual</span><br>Modalidad virtual, no aplica infraestructura física.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Virtual</span><br>Modalidad virtual, no aplica infraestructura física.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Virtual</span><br>Modalidad virtual, no aplica infraestructura física.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ==================== CATEGORÍA TECNOLÓGICO ==================== -->
+            <div id="categoria-tecnologia" class="category-pane" style="display: none;">
+                <div class="table-wrapper">
+                    <table class="regional-analysis-table">
+                        <thead>
+                            <tr>
+                                <th width="18%">Subcategoría</th>
+                                <th width="7%">Sincelejo</th>
+                                <th width="7%">Montería</th>
+                                <th width="7%">Santa Marta</th>
+                                <th width="7%">Neiva</th>
+                                <th width="7%">Ibagué</th>
+                                <th width="7%">Cali</th>
+                                <th width="7%">Bogotá P</th>
+                                <th width="7%">Bogotá V</th>
+                                <th width="7%">Pereira</th>
+                                <th width="7%">Villavicencio</th>
+                                <th width="7%">Bucaramanga</th>
+                                <th width="7%">Yopal</th>
+                                <th width="7%">Medellín</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="category-cell"><strong>Plataforma CDigital</strong></td>
+                                <td>🟡 <span style="color:#f59e0b; font-weight:600;">Mixto</span><br>Plataforma útil pero con problemas de carga. Se satura en horas pico de entregas.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Bueno</span><br>Organizada y funcional. Los estudiantes la usan sin mayores problemas.</td>
+                                <td>🟡 <span style="color:#f59e0b; font-weight:600;">Mixto</span><br>Se cae frecuentemente durante quizzes. No permite cargar archivos pesados.</td>
+                                <td>🟡 <span style="color:#f59e0b; font-weight:600;">Mixto</span><br>Funcional pero con fallas de estabilidad en momentos críticos de evaluación.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Bueno</span><br>Funciona bien, sin mayores inconvenientes para cargar trabajos y ACAS.</td>
+                                <td>🟡 <span style="color:#f59e0b; font-weight:600;">Mixto</span><br>Curva de aprendizaje compleja. Falta estandarización en cómo los profes organizan contenidos.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Bueno</span><br>Plataforma estable y disponible. La estudiante no reporta problemas.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Excelente</span><br>Nunca falla, disponible 24/7. Los estudiantes la valoran positivamente.</td>
+                                <td>🟡 <span style="color:#f59e0b; font-weight:600;">Mixto</span><br>Se cae en horas de la noche durante quizzes. El tiempo sigue corriendo.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Excelente</span><br>Jorge no tiene problemas. Jamie reporta fallas en parciales donde perdió intentos.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Excelente</span><br>Mairen no ha tenido ningún inconveniente. Le ha ido excelente.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Bueno</span><br>Plataforma completa aunque requiere práctica para manejarla bien.</td>
+                                <tr>🟢 <span style="color:#10b981; font-weight:600;">Excelente</span><br>Plataforma fluida, rara vez se cae. Los estudiantes la manejan bien.</td>
+                            </tr>
+                            <tr>
+                                <td class="category-cell"><strong>Plataforma SINU</strong></td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Sin datos</span><br>No se reportaron observaciones sobre SINU en esta sesión.</td>
+                                <td>🟡 <span style="color:#f59e0b; font-weight:600;">Mixto</span><br>Poco uso y falta de familiaridad. Los procesos financieros son lentos.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Sin datos</span><br>No se reportaron observaciones sobre SINU en esta sesión.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Sin datos</span><br>No se reportaron observaciones sobre SINU en esta sesión.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Sin datos</span><br>No se reportaron observaciones sobre SINU en esta sesión.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Sin datos</span><br>No se reportaron observaciones sobre SINU en esta sesión.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Sin datos</span><br>No se reportaron observaciones sobre SINU en esta sesión.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Sin datos</span><br>No se reportaron observaciones sobre SINU en esta sesión.</td>
+                                <td>🔴 <span style="color:#ef4444; font-weight:600;">Crítico</span><br>David no la usa, no confía en la plataforma. Prefiere no usarla.</td>
+                                <td>🔴 <span style="color:#ef4444; font-weight:600;">Crítico</span><br>No se puede descargar recibo de matrícula. Horarios salen en blanco.</td>
+                                <td>🔴 <span style="color:#ef4444; font-weight:600;">Crítico</span><br>Inconsistencias en pagos. Le han cobrado seguros repetidos y no se soluciona.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Sin datos</span><br>No se reportaron observaciones sobre SINU en esta sesión.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Sin datos</span><br>No se reportaron observaciones sobre SINU en esta sesión.</td>
+                            </tr>
+                            <tr>
+                                <td class="category-cell"><strong>Herramientas en Aula</strong></td>
+                                <td>🔴 <span style="color:#ef4444; font-weight:600;">Crítico</span><br>TV pequeños, estudiantes del fondo no ven código. PCs lentos para software pesado.</td>
+                                <td>🔴 <span style="color:#ef4444; font-weight:600;">Crítico</span><br>No hay CPUs, ponchadoras, ni herramientas básicas. Dependencia total de simuladores.</td>
+                                <td>🔴 <span style="color:#ef4444; font-weight:600;">Crítico</span><br>Falta de licencias Adobe. PCs insuficientes para edición. TVs pequeños.</td>
+                                <td>🟡 <span style="color:#f59e0b; font-weight:600;">Mixto</span><br>Equipos básicos con mantenimiento deficiente en periféricos. Necesidad de renovación.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Virtual</span><br>Modalidad virtual, no aplica hardware en aula.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Virtual</span><br>Modalidad virtual, no aplica hardware en aula.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Virtual</span><br>Modalidad virtual, no aplica hardware en aula.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Virtual</span><br>Modalidad virtual, no aplica hardware en aula.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Virtual</span><br>Modalidad virtual, no aplica hardware en aula.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Virtual</span><br>Modalidad virtual, no aplica hardware en aula.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Virtual</span><br>Modalidad virtual, no aplica hardware en aula.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Virtual</span><br>Modalidad virtual, no aplica hardware en aula.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Virtual</span><br>Modalidad virtual, no aplica hardware en aula.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ==================== CATEGORÍA INFRAESTRUCTURA ==================== -->
+            <div id="categoria-infraestructura" class="category-pane" style="display: none;">
+                <div class="table-wrapper">
+                    <table class="regional-analysis-table">
+                        <thead>
+                            <tr>
+                                <th width="18%">Subcategoría</th>
+                                <th width="7%">Sincelejo</th>
+                                <th width="7%">Montería</th>
+                                <th width="7%">Santa Marta</th>
+                                <th width="7%">Neiva</th>
+                                <th width="7%">Ibagué</th>
+                                <th width="7%">Cali</th>
+                                <th width="7%">Bogotá P</th>
+                                <th width="7%">Bogotá V</th>
+                                <th width="7%">Pereira</th>
+                                <th width="7%">Villavicencio</th>
+                                <th width="7%">Bucaramanga</th>
+                                <th width="7%">Yopal</th>
+                                <th width="7%">Medellín</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="category-cell"><strong>Comodidad y Servicios Físicos</strong></td>
+                                <td>🔴 <span style="color:#ef4444; font-weight:600;">Crítico</span><br>Calor extremo, falta de zonas de descanso y cafetería. Baños con mantenimiento irregular.</td>
+                                <td>🟡 <span style="color:#f59e0b; font-weight:600;">Mixto</span><br>Ambiente agradable pero con carencias de comunicación. Calor en salones cuando fallan aires.</td>
+                                <td>🔴 <span style="color:#ef4444; font-weight:600;">Crítico</span><br>Calor insoportable. Aires dañados, baños sucios, falta de bebederos y cafetería.</td>
+                                <td>🟡 <span style="color:#f59e0b; font-weight:600;">Mixto</span><br>Sede tipo oficina, falta alma de campus. Necesidad de bebederos de agua fría.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Virtual</span><br>Modalidad virtual, no aplica infraestructura física.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Virtual</span><br>Modalidad virtual, no aplica infraestructura física.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Bueno</span><br>Aulas limpias y agradables. La sede de Bosa está en buen estado.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Virtual</span><br>Modalidad virtual, no aplica infraestructura física.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Virtual</span><br>Modalidad virtual, no aplica infraestructura física.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Virtual</span><br>Modalidad virtual, no aplica infraestructura física.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Virtual</span><br>Modalidad virtual, no aplica infraestructura física.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Virtual</span><br>Modalidad virtual, no aplica infraestructura física.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Virtual</span><br>Modalidad virtual, no aplica infraestructura física.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ==================== CATEGORÍA BIENESTAR ==================== -->
+            <div id="categoria-bienestar" class="category-pane" style="display: none;">
+                <div class="table-wrapper">
+                    <table class="regional-analysis-table">
+                        <thead>
+                            <tr>
+                                <th width="18%">Subcategoría</th>
+                                <th width="7%">Sincelejo</th>
+                                <th width="7%">Montería</th>
+                                <th width="7%">Santa Marta</th>
+                                <th width="7%">Neiva</th>
+                                <th width="7%">Ibagué</th>
+                                <th width="7%">Cali</th>
+                                <th width="7%">Bogotá P</th>
+                                <th width="7%">Bogotá V</th>
+                                <th width="7%">Pereira</th>
+                                <th width="7%">Villavicencio</th>
+                                <th width="7%">Bucaramanga</th>
+                                <th width="7%">Yopal</th>
+                                <th width="7%">Medellín</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="category-cell"><strong>Beneficios y Becas</strong></td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Positivo</span><br>Becas culturales y deportivas muy valoradas. Son el motor de participación y permanencia.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Positivo</span><br>Beneficios valorados pero falta difusión. C Te Ayuda es bien recibido.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Positivo</span><br>Precios accesibles y facilidades de pago. La homologación fue un factor clave.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Positivo</span><br>Becas claras y fundamentales para la permanencia. Proceso de aplicación sencillo.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Positivo</span><br>C Te Ayuda muy valorado por su flexibilidad de pagos y ausencia de intereses.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Sin datos</span><br>No se reportaron observaciones sobre beneficios y becas en esta sesión.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Positivo</span><br>Precios accesibles y convenios con Colmédicos fueron determinantes para elegir la CUN.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Positivo</span><br>Precios accesibles y facilidades de pago. Los estudiantes valoran la relación calidad-precio.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Sin datos</span><br>No se reportaron observaciones sobre beneficios y becas en esta sesión.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Positivo</span><br>Homologación de materias fue un factor clave. Precios accesibles y virtualidad.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Positivo</span><br>Homologación fue un buen gancho. La CUN es una oportunidad con precios accesibles.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Sin datos</span><br>No se reportaron observaciones sobre beneficios y becas en esta sesión.</td>
+                                <td>⚪ <span style="color:#6b7280; font-weight:600;">Sin datos</span><br>No se reportaron observaciones sobre beneficios y becas en esta sesión.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ==================== CATEGORÍA PERTENENCIA ==================== -->
+            <div id="categoria-pertenencia" class="category-pane" style="display: none;">
+                <div class="table-wrapper">
+                    <table class="regional-analysis-table">
+                        <thead>
+                            <tr>
+                                <th width="18%">Subcategoría</th>
+                                <th width="7%">Sincelejo</th>
+                                <th width="7%">Montería</th>
+                                <th width="7%">Santa Marta</th>
+                                <th width="7%">Neiva</th>
+                                <th width="7%">Ibagué</th>
+                                <th width="7%">Cali</th>
+                                <th width="7%">Bogotá P</th>
+                                <th width="7%">Bogotá V</th>
+                                <th width="7%">Pereira</th>
+                                <th width="7%">Villavicencio</th>
+                                <th width="7%">Bucaramanga</th>
+                                <th width="7%">Yopal</th>
+                                <th width="7%">Medellín</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="category-cell"><strong>Orgullo y Recomendación</strong></td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Excelente</span><br>Orgullosos de ser la sede con mejor pensum. La IA y la calidad académica son su bandera.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Positivo</span><br>A pesar de las fallas, quieren terminar. La CUN les dio oportunidad de estudiar virtual.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Positivo</span><br>Agradecidos con la CUN. A pesar de todo, quieren terminar su carrera.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Positivo</span><br>Valoran la oportunidad de estudio. Sentimiento de orgullo por la calidad docente.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Positivo</span><br>Quieren terminar la carrera. La CUN es una oportunidad de crecer profesionalmente.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Positivo</span><br>Norbert quiere terminar en 10 años si es necesario. Su meta es graduarse.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Positivo</span><br>Orgullosa de estudiar en la CUN. La virtualidad le permite trabajar y estudiar.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Positivo</span><br>Precio y flexibilidad son los principales factores de permanencia. Quieren terminar.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Positivo</span><br>Experiencia positiva en general. David se siente satisfecho con la formación.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Positivo</span><br>Oportunidad de reinventarse. La CUN les permite cambiar de área laboral.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Positivo</span><br>Oportunidad de estudio virtual con precios accesibles. La homologación fue clave.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Positivo</span><br>Oportunidad, progreso y aprendizaje. La CUN es parte fundamental de su desarrollo.</td>
+                                <td>🟢 <span style="color:#10b981; font-weight:600;">Excelente</span><br>Oportunidad para crecer profesionalmente. La CUN les ha abierto puertas laborales.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
-        <!-- TABLA COMPARATIVA POR CIUDAD -->
-        <section id="comparativa" class="tab-pane active" style="margin-top: 50px;">
-            <h2 class="section-subtitle">Análisis Comparativo por Ciudad</h2>
-
-            <div class="table-wrapper">
-                <table class="regional-analysis-table">
-                    <thead>
-                        <tr>
-                            <th>Categoría</th>
-                            <th>Ibagué</th>
-                            <th>Cali</th>
-                            <th>Bogotá P</th>
-                            <th>Montería</th>
-                            <th>Sincelejo</th>
-                            <th>Santa Marta</th>
-                            <th>Pereira</th>
-                            <th>Villavicencio</th>
-                            <th>Bucaramanga</th>
-                            <th>Yopal</th>
-                            <th>Medellín</th>
-                            <th>Bogotá V</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                        <!-- Fila de participantes -->
-                        <tr>
-                            <td class="category-cell"><strong>Participantes<br>(H/M/T)</strong></td>
-                            <td>1/1/2</td>
-                            <td>1/0/1</td>
-                            <td>0/1/1</td>
-                            <td>0/1/1</td>
-                            <td>5/2/7</td>
-                            <td>3/4/7</td>
-                            <td>1/0/1</td>
-                            <td>1/1/2</td>
-                            <td>0/1/1</td>
-                            <td>0/1/1</td>
-                            <td>1/2/3</td>
-                            <td>3/3/6</td>
-                        </tr>
-
-                        <!-- Académico -->
-                        <tr>
-                            <td class="category-cell"><strong>Académico</strong></td>
-                            <td>Docentes flexibles<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>Contenidos útiles<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>Grupos pequeños<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>Docentes dinámicos<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>Pensum competitivo + IA<br><span style="color:#10b981;">✔️ Excelente</span></td>
-                            <td>Malla completa<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>Ajustado a realidad<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>IA enseñada<br><span style="color:#10b981;">✔️ Excelente</span></td>
-                            <td>Algunos docentes débiles<br><span style="color:#f59e0b;">⚠️ Mixto</span></td>
-                            <td>Docentes interactivos<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>Aplicable al trabajo<br><span style="color:#10b981;">✔️ Excelente</span></td>
-                            <td>Contenidos prácticos<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                        </tr>
-
-                        <!-- Prácticas Profesionales -->
-                        <tr>
-                            <td class="category-cell"><strong>Prácticas</strong></td>
-                            <td>Incertidumbre<br><span style="color:#ef4444;">⚠️ Crítico</span></td>
-                            <td>Sin contrato válido<br><span style="color:#ef4444;">⚠️ Crítico</span></td>
-                            <td>Sin datos<br><span style="color:#6b7280;">⚪ No reportado</span></td>
-                            <td>Problemas gestión<br><span style="color:#ef4444;">⚠️ Crítico</span></td>
-                            <td>Falta convenios<br><span style="color:#ef4444;">⚠️ Crítico</span></td>
-                            <td>Sin docente guía<br><span style="color:#ef4444;">⚠️ Crítico</span></td>
-                            <td>Sin datos<br><span style="color:#6b7280;">⚪ No reportado</span></td>
-                            <td>Sin datos<br><span style="color:#6b7280;">⚪ No reportado</span></td>
-                            <td>Rotación docentes<br><span style="color:#ef4444;">⚠️ Crítico</span></td>
-                            <td>Sin datos<br><span style="color:#6b7280;">⚪ No reportado</span></td>
-                            <td>Autogestión<br><span style="color:#f59e0b;">⚠️ Mixto</span></td>
-                            <td>Sin datos<br><span style="color:#6b7280;">⚪ No reportado</span></td>
-                        </tr>
-
-                        <!-- CamiTicket -->
-                        <tr>
-                            <td class="category-cell"><strong>CamiTicket</strong></td>
-                            <td>Inconsistente<br><span style="color:#f59e0b;">⚠️ Mixto</span></td>
-                            <td>Sin problemas<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>Coordinadora poco empática<br><span style="color:#ef4444;">⚠️ Crítico</span></td>
-                            <td>Problema con promoción<br><span style="color:#ef4444;">⚠️ Crítico</span></td>
-                            <td>Sistema odiado<br><span style="color:#ef4444;">⚠️ Crítico</span></td>
-                            <td>No responde<br><span style="color:#ef4444;">⚠️ Crítico</span></td>
-                            <td>Sin datos<br><span style="color:#6b7280;">⚪ No reportado</span></td>
-                            <td>Jamie casi deserta<br><span style="color:#ef4444;">⚠️ Crítico</span></td>
-                            <td>Inconsistencias pagos<br><span style="color:#f59e0b;">⚠️ Mixto</span></td>
-                            <td>Tuvo respuesta<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>1.5 meses sin respuesta<br><span style="color:#ef4444;">⚠️ Crítico</span></td>
-                            <td>Diego perdió semestre<br><span style="color:#ef4444;">⚠️ Crítico</span></td>
-                        </tr>
-
-                        <!-- Bienestar -->
-                        <tr>
-                            <td class="category-cell"><strong>Bienestar</strong></td>
-                            <td>C Te Ayuda<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>Sin datos<br><span style="color:#6b7280;">⚪ No reportado</span></td>
-                            <td>Sin experiencia<br><span style="color:#6b7280;">⚪ No reportado</span></td>
-                            <td>Sin datos<br><span style="color:#6b7280;">⚪ No reportado</span></td>
-                            <td>Departamento estrella<br><span style="color:#10b981;">✔️ Excelente</span></td>
-                            <td>Karen salvavidas<br><span style="color:#10b981;">✔️ Excelente</span></td>
-                            <td>Sin datos<br><span style="color:#6b7280;">⚪ No reportado</span></td>
-                            <td>Precios accesibles<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>Homologación gancho<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>Sin datos<br><span style="color:#6b7280;">⚪ No reportado</span></td>
-                            <td>Sin datos<br><span style="color:#6b7280;">⚪ No reportado</span></td>
-                            <td>Sin datos<br><span style="color:#6b7280;">⚪ No reportado</span></td>
-                        </tr>
-
-                        <!-- Infraestructura -->
-                        <tr>
-                            <td class="category-cell"><strong>Infraestructura</strong></td>
-                            <td>Virtual N/A<br><span style="color:#6b7280;">⚪ No aplica</span></td>
-                            <td>Virtual N/A<br><span style="color:#6b7280;">⚪ No aplica</span></td>
-                            <td>Aulas limpias<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>Virtual N/A<br><span style="color:#6b7280;">⚪ No aplica</span></td>
-                            <td>Calor extremo<br><span style="color:#ef4444;">⚠️ Crítico</span></td>
-                            <td>Calor + baños<br><span style="color:#ef4444;">⚠️ Crítico</span></td>
-                            <td>Virtual N/A<br><span style="color:#6b7280;">⚪ No aplica</span></td>
-                            <td>Virtual N/A<br><span style="color:#6b7280;">⚪ No aplica</span></td>
-                            <td>Virtual N/A<br><span style="color:#6b7280;">⚪ No aplica</span></td>
-                            <td>Virtual N/A<br><span style="color:#6b7280;">⚪ No aplica</span></td>
-                            <td>Virtual N/A<br><span style="color:#6b7280;">⚪ No aplica</span></td>
-                            <td>Virtual N/A<br><span style="color:#6b7280;">⚪ No aplica</span></td>
-                        </tr>
-
-                        <!-- Tecnología CDigital -->
-                        <tr>
-                            <td class="category-cell"><strong>CDigital</strong></td>
-                            <td>Funciona bien<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>Curva aprendizaje<br><span style="color:#f59e0b;">⚠️ Mixto</span></td>
-                            <td>Estable<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>Dexway excelente<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>Problemas carga<br><span style="color:#f59e0b;">⚠️ Mixto</span></td>
-                            <td>Inestable<br><span style="color:#f59e0b;">⚠️ Mixto</span></td>
-                            <td>Caídas nocturnas<br><span style="color:#f59e0b;">⚠️ Mixto</span></td>
-                            <td>Excelente<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>Sin problemas<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>Completa<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>Fluida<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>24/7 disponible<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                        </tr>
-
-                        <!-- Pertenencia -->
-                        <tr>
-                            <td class="category-cell"><strong>Pertenencia</strong></td>
-                            <td>Quieren terminar<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>Norbert quiere terminar<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>Orgullosa<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>Muy agradecida<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>Orgullosos IA<br><span style="color:#10b981;">✔️ Excelente</span></td>
-                            <td>Agradecidos<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>Experiencia positiva<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>Oportunidad reinventarse<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>Oportunidad virtual<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>Progreso aprendizaje<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>Oportunidad crecer<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                            <td>Precio + flexibilidad<br><span style="color:#10b981;">✔️ Positivo</span></td>
-                        </tr>
-
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Leyenda explicativa -->
-            <div style="margin-top: 20px; padding: 15px; background: #f0f4fa; border-radius: 8px; font-size: 12px;">
-                <strong>📊 Leyenda de evaluación:</strong><br>
-                ✔️ <span style="color:#10b981;">Positivo / Excelente</span> - La experiencia es satisfactoria, sin quejas mayores.<br>
-                ⚠️ <span style="color:#f59e0b;">Mixto / Regular</span> - Hay aspectos positivos y negativos; oportunidades de mejora.<br>
-                ⚠️ <span style="color:#ef4444;">Crítico</span> - Problema grave que requiere atención inmediata.<br>
-                ⚪ <span style="color:#6b7280;">Sin datos / No aplica</span> - No se reportó información en la sesión o no aplica por modalidad virtual.
-            </div>
-
-        </section>
-
     </main>
-
 </div>
 
 <script>
-    function toggleAccordion() {
-        const content = document.getElementById('accordion-content');
-        const icon = document.getElementById('acc-icon');
-        if (content.style.display === "block") {
-            content.style.display = "none";
-            icon.innerText = "+";
-        } else {
-            content.style.display = "block";
-            icon.innerText = "-";
-        }
-    }
+    // Lógica para cambiar entre pestañas de categorías
+    const categoryTabs = document.querySelectorAll('.category-tab');
+    const categoryPanes = document.querySelectorAll('.category-pane');
 
+    categoryTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const categoryId = this.getAttribute('data-category');
+            
+            // Cambiar estilo de las pestañas
+            categoryTabs.forEach(t => {
+                t.style.color = '#666';
+                t.style.borderBottom = 'none';
+            });
+            this.style.color = '#333';
+            this.style.borderBottom = '3px solid #e10915';
+            
+            // Mostrar el panel correspondiente
+            categoryPanes.forEach(pane => {
+                pane.style.display = 'none';
+            });
+            document.getElementById(`categoria-${categoryId}`).style.display = 'block';
+        });
+    });
+
+    // Lógica para cambiar entre pestañas del sidebar
     const tabs = document.querySelectorAll('.nav-btn');
     const panes = document.querySelectorAll('.tab-pane');
 
